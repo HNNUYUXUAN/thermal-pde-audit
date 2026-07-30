@@ -1,8 +1,16 @@
+<p align="center">
+  <strong>简体中文</strong> · <a href="README.en.md">English</a>
+</p>
+
 # 热鉴 · Thermal PDE Audit
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![CPU Validation](https://img.shields.io/badge/tests-55%20passed-brightgreen.svg)](.github/workflows/cpu-validation.yml)
+
+<p align="center">
+  <img src="showcase-images/01-thermal-pde-audit-overview.png" alt="Thermal PDE Audit: auditable quantum simulation for heat conduction" width="100%">
+</p>
 
 **让自然语言描述的热传导问题，成为可在壁仞 GPU 上执行、可用经典方法核验、可由完整证据复现的量子仿真实验。**
 
@@ -48,9 +56,22 @@ torch.supa + 项目自研 .su 归约核
 物理审计、报告、图表、日志与复现命令
 ```
 
+<p align="center">
+  <img src="showcase-images/10-end-to-end-scientific-evidence-workflow.png" alt="End-to-end scientific evidence workflow from natural-language requirements to physical audit and reproducible deliverables" width="100%">
+</p>
+
 系统将自然语言交互层、物理协议层、经典基线、量子执行、设备审计和证据输出
 拆分为可独立测试的模块。完整架构见
 [docs/architecture.md](docs/architecture.md)。
+
+### 同一物理问题，三条可比较路线
+
+每一次受控实验都以同一热方程为起点，并将解析解、经典有限差分与 UnitaryLab Schrödingerization
+量子线路仿真置于统一尺度和审计指标下比较；这使“运行完成”与“结果可信”成为可区分、可复核的结论。
+
+<p align="center">
+  <img src="showcase-images/04-three-solver-baselines.png" alt="One heat equation compared through analytic, classical finite-difference, and quantum-simulation routes" width="100%">
+</p>
 
 ## 快速开始
 
@@ -73,6 +94,12 @@ python skills/thermal-pde-audit/scripts/algorithm.py \
   --text "长度10毫米，热扩散率1e-6平方米每秒，初始温升100K，计算0.1秒，使用32个空间点"
 ```
 
+自然语言入口不是自由猜测：它将需求约束为白名单参数、SI 单位和结构化实验计划，再交给后续求解与审计环节。
+
+<p align="center">
+  <img src="showcase-images/05-natural-language-experiment-protocol.png" alt="Natural-language request normalized into a whitelisted, SI-unit, structured experiment plan" width="100%">
+</p>
+
 在竞赛容器中执行 GPU、CPU/GPU 对照、双 SUPA、误差分层和报告生成：
 
 ```bash
@@ -91,6 +118,14 @@ bash skills/thermal-pde-audit/scripts/run-text-demo.sh
 
 ## 已验证成果
 
+### 可追踪的量子 PDE 路线
+
+这里的“量子”是 UnitaryLab 的量子线路/状态向量仿真路线，而非量子硬件声明。项目保存线路产物、设备路由、同参数恢复和误差分层证据，以便将每次计算追溯到实际执行链。
+
+<p align="center">
+  <img src="showcase-images/06-quantum-pde-execution-trace.png" alt="Traceable quantum PDE circuit-simulation route on Biren GPU" width="100%">
+</p>
+
 最新公开 Skill 入口已在 Biren106M 竞赛容器完成端到端实跑，覆盖自然语言解析、
 解析解、有限差分、UnitaryLab CPU/GPU、`torch.supa`、项目 `.su` 核、
 误差分层、物理审计和证据导出。
@@ -107,6 +142,10 @@ bash skills/thermal-pde-audit/scripts/run-text-demo.sh
 | 项目自研 `.su` 核一致性 | 通过 |
 | 物理与数值审计 | 全部通过 |
 
+<p align="center">
+  <img src="showcase-images/08-gpu-temperature-field-comparison.png" alt="GPU quantum-simulation temperature field compared directly with the L2 reference" width="100%">
+</p>
+
 项目同时保存标准尺度 `Fo=0.06`、32 个内部点、32 个 Trotter 时间分片的统一
 复验结果，并提供：
 
@@ -115,6 +154,10 @@ bash skills/thermal-pde-audit/scripts/run-text-demo.sh
   闭环的 Agent/Skill 交互记录；
 - 55 项自动化测试及 GitHub Actions；
 - 10 张 Origin 友好 CSV 表、189 行绘图数据和一份已复核 Excel 工作簿。
+
+<p align="center">
+  <img src="showcase-images/07-verified-parameter-profiles.png" alt="Validated quantum parameter profiles across Fourier number, spatial resolution, and Trotter steps" width="100%">
+</p>
 
 结果说明见 [docs/results.md](docs/results.md)，原始证据位于：
 
@@ -137,6 +180,10 @@ error_decomposition.png
 unitarylab_cpu/*.svg
 unitarylab_gpu/*.svg
 ```
+
+<p align="center">
+  <img src="showcase-images/09-error-decomposition-analysis.png" alt="Error decomposition identifies spatial discretization, recovery, and Trotter contributions" width="100%">
+</p>
 
 这些文件分别回答“输入是什么、实际运行了什么、结果是否通过、如何解释、
 如何复现”，构成可机器校验也可供评审阅读的证据闭环。
