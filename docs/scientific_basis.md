@@ -1,8 +1,8 @@
-# Scientific Basis
+# 科学基础
 
-## Heat-equation reference problem
+## 热方程参考问题
 
-The controlled experiment solves:
+受控实验求解：
 
 ```text
 ∂T/∂t = α ∂²T/∂x²,      0 < x < L
@@ -10,79 +10,76 @@ T(0,t) = T(L,t) = 0
 T(x,0) = A sin(πx/L)
 ```
 
-The analytic solution is:
+解析解为：
 
 ```text
 T(x,t) = A exp[-α(π/L)²t] sin(πx/L)
 ```
 
-This solution supplies a direct physical reference for every grid point.
+解析解为每个空间点提供直接的物理参考。
 
-## Classical discretization
+## 经典离散
 
-The explicit centered finite-difference update is:
+显式中心有限差分更新为：
 
 ```text
 Tᵢⁿ⁺¹ = Tᵢⁿ + r(Tᵢ₋₁ⁿ - 2Tᵢⁿ + Tᵢ₊₁ⁿ)
 r = αΔt/Δx²
 ```
 
-The solver checks the standard stability condition `r ≤ 1/2` before
-execution. This produces an independent numerical baseline with transparent
-time and space discretization.
+求解前检查经典稳定性条件 `r ≤ 1/2`，从而形成时间和空间离散均透明的独立
+数值基线。
 
-## Nondimensionalization
+## 无量纲化
 
-The physical experiment is mapped to:
+将物理实验映射为：
 
 ```text
 x* = x/L
 t* = αt/L²
 ```
 
-so the normalized equation has unit length and unit diffusivity. Temperature
-is rescaled by the initial amplitude after quantum execution. The dimensionless
-duration is the Fourier number:
+归一化方程具有单位长度和单位热扩散率。量子执行结束后再按初始温升恢复温度
+尺度。无量纲时长即 Fourier 数：
 
 ```text
 Fo = αt/L²
 ```
 
-## Schrödingerization layer
+## Schrödingerization 量子仿真层
 
-The quantum-simulation path uses the heat-equation implementation from
-UnitaryLab Algorithms. The project supplies:
+量子仿真路径调用 UnitaryLab Algorithms 的热方程 Schrödingerization
+实现。本项目提供：
 
-- the physical-to-dimensionless mapping;
-- the exact measured parameter profile;
-- CPU/GPU device routing and route evidence;
-- field extraction and SI rescaling;
-- independent reference solvers and numerical audits.
+- 物理量到无量纲参数的映射；
+- 有保存证据的精确量子参数档案；
+- CPU/GPU 设备路由与路由记录；
+- 温度场提取和 SI 尺度恢复；
+- 独立参考求解器与数值审计。
 
-For interpretation, each complete run compares:
+每次完整运行比较：
 
-1. continuous analytic solution;
-2. exact evolution of the central-difference semi-discrete system;
-3. same-parameter Schrödingerization recovery;
-4. Trotter circuit result.
+1. 连续解析解；
+2. 中心差分半离散系统的精确演化；
+3. 同参数 Schrödingerization 恢复；
+4. Trotter 量子线路结果。
 
-This decomposition makes spatial discretization, auxiliary recovery, and
-Trotter differences visible in the same result bundle.
+该分层在同一结果包中呈现空间离散、辅助恢复和 Trotter 演化带来的差异。
 
-## Physics audit
+## 物理审计
 
-The audit checks:
+审计覆盖：
 
-- finite field values;
-- zero Dirichlet boundary completion;
-- temperature range and maximum principle;
-- expected modal decay;
-- classical stability;
-- analytic, classical, and quantum error metrics;
-- CPU/GPU field consistency;
-- SUPA and NumPy metric consistency.
+- 温度场有限性；
+- 零 Dirichlet 边界补全；
+- 温度范围与最大值原理；
+- 一阶模态衰减；
+- 经典有限差分稳定性；
+- 解析、经典和量子误差指标；
+- CPU/GPU 温度场一致性；
+- SUPA 与 NumPy 指标一致性。
 
-## References
+## 参考文献与实现
 
 1. S. Jin and N. Liu, “Analog quantum simulation of partial differential
    equations,” *Physical Review Letters* 130, 080401 (2023).
@@ -94,5 +91,4 @@ The audit checks:
    equations: Applications and detailed analysis,” arXiv:2303.13088.
    <https://arxiv.org/abs/2303.13088>
 4. [UnitaryLab Algorithms](https://github.com/unitarylab/unitarylab_algorithms)
-   provides the installed heat-equation Schrödingerization implementation used
-   by this project.
+   提供本项目调用的热方程 Schrödingerization 实现。

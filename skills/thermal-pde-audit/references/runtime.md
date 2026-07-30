@@ -1,6 +1,6 @@
-# Biren Runtime
+# 壁仞运行环境
 
-## Verified environment
+## 已验证环境
 
 ```text
 Python                    3.10.12
@@ -12,16 +12,16 @@ device                    Biren106M
 torch.supa.device_count   1
 ```
 
-## Environment setup
+## 环境准备
 
 ```bash
 source /usr/local/birensupa/sdk/1.11.0.0.rc2/scripts/brsw_set_env.sh >/dev/null
 export PYTHONPATH=/workspace/thermal-pde-audit/src
 ```
 
-## Device evidence
+## 设备证据
 
-Check these `result.json` fields after a GPU run:
+GPU 运行后检查 `result.json`：
 
 ```text
 quantum.backend
@@ -32,27 +32,26 @@ quantum.algorithm_log_handler_cleanup
 quantum.algorithm_figure_cleanup
 ```
 
-A complete GPU route records:
+完整 GPU 路由应记录：
 
-- `backend = unitarylab_gpu`;
-- `requested_device = gpu`;
-- a lower-level routed call with `device = gpu`;
-- `all_devices_match_requested = true`;
-- `restored = true`.
+- `backend = unitarylab_gpu`；
+- `requested_device = gpu`；
+- 底层调用使用 `device = gpu`；
+- `all_devices_match_requested = true`；
+- `restored = true`。
 
-## SUPA kernel
+## SUPA 核
 
-Build:
+构建：
 
 ```bash
 bash scripts/build_custom_supa_kernel.sh
 ```
 
-The workflow calls:
+工作流调用：
 
 ```text
 build/custom_supa/supa_error_reduction.out
 ```
 
-and saves kernel metadata, metrics, runtime, and NumPy comparisons in
-`custom_supa_audit`.
+并在 `custom_supa_audit` 中保存核元数据、指标、运行时间和 NumPy 对照。

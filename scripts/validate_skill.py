@@ -66,8 +66,8 @@ def main() -> int:
         encoding="utf-8"
     )
     required_interface_lines = {
-        'display_name: "Thermal PDE Audit"',
-        'short_description: "Physics-validated quantum heat simulation workflow"',
+        'display_name: "热鉴 · Thermal PDE Audit"',
+        'short_description: "自然语言驱动的热方程量子仿真、物理审计与复现报告生成"',
         '$thermal-pde-audit',
     }
     absent = sorted(

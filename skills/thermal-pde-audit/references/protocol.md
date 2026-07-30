@@ -1,6 +1,6 @@
-# Input Protocol
+# 输入协议
 
-## Structured schema
+## 结构化参数
 
 ```json
 {
@@ -18,37 +18,36 @@
 }
 ```
 
-Required physical values are positive SI numbers:
+要求以下物理量为正的 SI 数值：
 
 - `length_m`
 - `thermal_diffusivity_m2_s`
 - `initial_amplitude_k`
 - `duration_s`
 
-Accepted configuration values:
+使用以下配置：
 
 - `task = heat_equation_1d`
 - `boundary = dirichlet_zero`
 - `initial_condition = sine_mode_1`
 - `device = cpu | gpu`
-- `spatial_points` is a power of two from 4 through 256
-- `time_steps` is an integer from 1 through 100000
+- `spatial_points` 为 4–256 范围内的 2 的幂
+- `time_steps` 为 1–100000 范围内的整数
 
-## Natural-language units
+## 自然语言单位
 
-Recognize:
+识别：
 
-- metre, millimetre, centimetre;
-- second, millisecond;
-- kelvin or Celsius temperature difference;
-- square metre, square millimetre, or square centimetre per second.
+- 米、毫米、厘米；
+- 秒、毫秒；
+- 开尔文或摄氏温差；
+- 平方米、平方毫米或平方厘米每秒。
 
-Convert every accepted value to SI before execution and record the original
-text and conversion source.
+执行前将所有参数转换为 SI 单位，并记录原始文本与转换来源。
 
-## Derived values
+## 派生参数
 
-Compute:
+计算：
 
 ```text
 Fo = thermal_diffusivity_m2_s * duration_s / length_m²
@@ -56,4 +55,4 @@ dx = length_m / (spatial_points + 1)
 r  = thermal_diffusivity_m2_s * dt / dx²
 ```
 
-Use `Fo + spatial_points` to query the exact validated quantum profile.
+使用 `Fo + spatial_points` 查询精确量子参数档案。

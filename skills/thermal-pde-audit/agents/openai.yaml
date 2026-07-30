@@ -1,4 +1,4 @@
 interface:
-  display_name: "Thermal PDE Audit"
-  short_description: "Physics-validated quantum heat simulation workflow"
-  default_prompt: "Use $thermal-pde-audit to turn a 1D heat-transfer request into a validated CPU/GPU quantum simulation report."
+  display_name: "热鉴 · Thermal PDE Audit"
+  short_description: "自然语言驱动的热方程量子仿真、物理审计与复现报告生成"
+  default_prompt: "使用 $thermal-pde-audit 将一维热传导需求转化为壁仞 GPU 量子仿真与物理审计报告。"

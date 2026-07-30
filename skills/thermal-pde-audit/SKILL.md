@@ -1,64 +1,49 @@
 ---
 name: thermal-pde-audit
-description: Convert structured or natural-language one-dimensional heat-transfer requests into physics-audited experiments with analytic and finite-difference baselines, exact UnitaryLab parameter profiles, CPU or Biren GPU quantum simulation, torch.supa and project-owned SUPA reductions, error decomposition, reports, logs, and figures. Use for thermal PDE simulation, CPU/GPU comparison, quantum heat-equation demonstrations, saved-evidence validation, or reproducible competition experiments.
+description: 将结构化或中英文自然语言的一维热传导任务转化为带物理审计的可复现实验，联合解析解、显式有限差分、UnitaryLab Schrödingerization CPU/壁仞 GPU 量子线路仿真、torch.supa 与项目自研 SUPA 归约、误差分层和证据报告。适用于热传导 PDE 仿真、CPU/GPU 对照、量子方程求解演示、结果复核与竞赛实验复现。
 ---
 
-# Thermal PDE Audit
+# 热鉴 · Thermal PDE Audit
 
-Turn a heat-transfer request into a reproducible experiment and return the
-generated result, audit, report, log, and figures.
+把一维热传导需求转化为可执行、可核验、可复现的量子仿真实验，并返回计算
+结果、物理审计、图表、日志和复现命令。
 
-## Read chain
+## 先选择工作方式
 
-Before writing commands or interpreting results:
+1. 处理自然语言需求时，使用 `--text` 规划或执行实验。
+2. 处理结构化实验时，使用 `--input` 读取 JSON 参数。
+3. 进行现场展示时，运行预置的 CPU/GPU/SUPA 完整演示。
+4. 复核已有成果时，验证保存的结果包，无需重新占用 GPU。
 
-1. Read this file.
-2. Read [references/protocol.md](references/protocol.md) for every new input.
-3. Read [references/setup.md](references/setup.md) when preparing an environment.
-4. Read [references/runtime.md](references/runtime.md) before a Biren GPU run.
-5. Read [references/evidence.md](references/evidence.md) when validating or
-   explaining results.
-6. Read [references/method.md](references/method.md) when explaining the
-   mathematics or the Schrödingerization pipeline.
-
-## Choose the workflow
-
-Use one of these paths:
-
-1. **Natural-language task** — plan or run the request with `plan-text` or
-   `run-text`.
-2. **Structured experiment** — validate a JSON input and run it with `run`.
-3. **Live demonstration** — execute the packaged fast CPU/GPU/SUPA workflow.
-4. **Evidence review** — validate an existing result bundle without rerunning
-   the GPU.
-
-Run the environment doctor before the first execution:
+首次运行前执行环境诊断：
 
 ```bash
 python skills/thermal-pde-audit/scripts/doctor.py
 ```
 
-Use `python3` instead of `python` when that is the active interpreter.
+根据任务按需阅读：
 
-## Plan a natural-language experiment
+- 每次新输入都阅读 [references/protocol.md](references/protocol.md)；
+- 解释物理与量子方法时阅读 [references/method.md](references/method.md)；
+- 准备项目环境时阅读 [references/setup.md](references/setup.md)；
+- 执行壁仞 GPU 任务前阅读 [references/runtime.md](references/runtime.md)；
+- 复核结果与指标时阅读 [references/evidence.md](references/evidence.md)。
 
-Use the Skill entry point:
+## 规划自然语言实验
+
+运行：
 
 ```bash
 python skills/thermal-pde-audit/scripts/algorithm.py \
-  --text "长度10毫米，热扩散率1e-6平方米每秒，初始温升100K，计算0.1秒"
+  --text "长度10毫米，热扩散率1e-6平方米每秒，初始温升100K，计算0.1秒，使用32个空间点"
 ```
 
-Return either:
+将输入映射到受控实验协议，统一转换为 SI 单位，并返回规范化参数和执行计划。
+遇到关键物理量缺失或冲突时，返回聚焦的澄清问题。
 
-- a complete normalized SI specification and execution plan; or
-- focused clarification questions for required physical values.
+## 执行完整自然语言实验
 
-Map user text only to the experiment schema and supported execution flags.
-
-## Run a natural-language experiment
-
-Use:
+运行：
 
 ```bash
 python skills/thermal-pde-audit/scripts/algorithm.py \
@@ -67,25 +52,36 @@ python skills/thermal-pde-audit/scripts/algorithm.py \
   --full-audit
 ```
 
-Confirm that `result.json` records:
+执行以下完整链路：
 
-- the original task;
-- parsed SI parameters;
-- selected quantum profile;
-- requested and effective device;
-- enabled audit stages;
-- a reproduction command based on `input.json`.
+1. 解析自然语言并记录原始需求；
+2. 归一化物理参数和单位；
+3. 生成解析解与显式有限差分基线；
+4. 根据 `Fo + spatial_points` 选择实测精确量子参数档案；
+5. 执行 UnitaryLab CPU/壁仞 GPU Schrödingerization 量子线路仿真；
+6. 生成半离散参考、同参数恢复与 Trotter 误差分层；
+7. 使用 `torch.supa` 和项目自研 `.su` 核计算误差指标；
+8. 完成物理与数值审计；
+9. 保存报告、日志、图表、线路和复现命令。
 
-## Run a structured experiment
+确认 `result.json` 记录：
 
-Inspect the exact profile first:
+- 原始任务与规范化 SI 参数；
+- 量子参数档案及其证据来源；
+- 请求设备、实际设备和底层路由记录；
+- 已执行的审计阶段和关键指标；
+- 基于 `input.json` 的受控复现命令。
+
+## 执行结构化实验
+
+先检查推荐的精确量子档案：
 
 ```bash
 python skills/thermal-pde-audit/scripts/algorithm.py \
   --input examples/standard_heat.json
 ```
 
-Then run:
+再执行完整实验：
 
 ```bash
 python skills/thermal-pde-audit/scripts/algorithm.py \
@@ -95,75 +91,98 @@ python skills/thermal-pde-audit/scripts/algorithm.py \
   --full-audit
 ```
 
-Use an exact measured profile for checked quantum experiments.
+## 运行现场演示
 
-## Run the demonstrations
-
-Fast full-chain demonstration:
+运行快速完整链：
 
 ```bash
 bash skills/thermal-pde-audit/scripts/run-demo.sh
 ```
 
-Natural-language full-chain demonstration:
+运行自然语言完整链：
 
 ```bash
 bash skills/thermal-pde-audit/scripts/run-text-demo.sh
 ```
 
-The demonstration executes analytic, classical, CPU quantum, GPU quantum,
-error-decomposition, `torch.supa`, custom `.su`, audit, and reporting stages.
+演示同时覆盖解析解、经典有限差分、UnitaryLab CPU/GPU、误差分层、
+`torch.supa`、项目 `.su` 核、物理审计、报告和图表。
 
-## Validate the result
+## 验证项目与证据
 
-Run the cross-platform validator:
+运行跨平台验证入口：
 
 ```bash
 python skills/thermal-pde-audit/scripts/validate.py
 ```
 
-On Linux or the competition container, this wrapper is equivalent:
+在 Linux 或竞赛容器中也可运行：
 
 ```bash
 bash skills/thermal-pde-audit/scripts/validate.sh
 ```
 
-Report the backend, actual routed device, profile, key error metrics, audit
-status, and artifact paths.
+开发验证：
 
-## Interpret the experiment
+```bash
+ruff check src tests scripts
+mypy src scripts tests
+pytest -q
+```
 
-Present results in this order:
+复核保存的完整结果：
 
-1. physical input and SI units;
-2. selected numerical and quantum parameters;
-3. analytic and classical baselines;
-4. CPU/GPU quantum results;
-5. error-decomposition metrics;
-6. SUPA consistency;
-7. physics-audit conclusion;
-8. generated files and reproduction command.
+```bash
+PYTHONPATH=src python3 -m thermal_pde_audit.cli validate-result \
+  --result-dir results/skill_entry_gpu_validation \
+  --require-gpu --require-supa --require-custom-supa \
+  --require-error-decomposition --require-natural-language
+```
 
-Always execute a requested demonstration or validation. Do not stop after
-constructing a command. Return at least one numerical validation signal and
-the paths to the saved result and report.
+## 输出实验成果
 
-Describe the quantum layer as a UnitaryLab quantum-circuit simulation executed
-on the Biren GPU. Attribute the heat-equation Schrödingerization implementation
-to UnitaryLab Algorithms and the orchestration, validation, SUPA kernel, and
-evidence system to this project.
+确保完整运行至少生成：
 
-## Use the supported scientific scope
+```text
+input.json
+result.json
+audit.json
+report.md
+run.log
+temperature_comparison.png
+error_decomposition.png
+unitarylab_cpu/*.svg
+unitarylab_gpu/*.svg
+```
 
-Work within the project protocol:
+报告结果时依次给出：
 
-- one-dimensional linear heat equation;
-- positive thermal diffusivity;
-- zero source;
-- zero Dirichlet boundaries;
-- first sine-mode initial temperature;
-- 4–256 interior points;
-- CPU or Biren GPU execution.
+1. 物理输入与 SI 单位；
+2. 数值参数与量子参数档案；
+3. 解析解与经典有限差分基线；
+4. CPU/GPU 量子仿真结果；
+5. 半离散、恢复与 Trotter 误差分层；
+6. `torch.supa` 与项目 `.su` 核一致性；
+7. 物理审计结论；
+8. 生成文件与复现命令。
 
-For a request outside this protocol, explain the closest supported experiment
-and ask whether to map the task to it.
+至少返回一个数值验证指标，以及 `result.json`、`audit.json` 和 `report.md`
+的保存路径。执行用户要求的演示或验证，不停留在命令规划阶段。
+
+## 使用已验证的科学协议
+
+在以下协议内执行实验：
+
+- 一维线性热方程；
+- 正热扩散率；
+- 零源项和零 Dirichlet 边界；
+- 一阶正弦初始温度；
+- 4–256 个内部网格点；
+- CPU 或壁仞 GPU 量子线路仿真。
+
+对协议外需求，先说明最接近的可验证实验映射，再请求用户确认。
+
+将量子层表述为 UnitaryLab 量子线路模拟器上的 Schrödingerization 热方程
+仿真。将热方程 Schrödingerization 实现归属于 UnitaryLab Algorithms；
+将自然语言编排、参数治理、设备路由、经典基线、双 SUPA、物理审计、证据
+验证和报告系统归属于本项目。

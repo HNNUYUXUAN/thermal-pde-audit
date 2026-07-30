@@ -1,37 +1,36 @@
-# Origin Plot Guide
+# Origin 绘图指南
 
-`results/origin_data/` contains ten UTF-8-BOM CSV tables with 189 rows. The
-tables can be imported directly into Origin, Excel, Python, or other scientific
-plotting tools. The current export uses
-`results/skill_entry_gpu_validation/` as its primary result source.
+`results/origin_data/` 包含 10 张 UTF-8-BOM CSV 表，共 189 行，可直接导入
+Origin、Excel、Python 或其他科学绘图工具。当前导出以
+`results/skill_entry_gpu_validation/` 为主要结果来源。
 
-## Recommended figures
+## 推荐图表
 
-| Figure | File | X | Y / grouping |
+| 图表 | 文件 | X | Y / 分组 |
 |---|---|---|---|
-| Temperature profile | `temperature_profile.csv` | `x_m` | analytic, classical, CPU quantum, GPU quantum |
-| Absolute error | `temperature_profile.csv` | `x_m` | absolute-error columns |
-| Error decomposition | `error_decomposition.csv` | `layer` | `relative_l2_error` |
-| Runtime comparison | `runtime_comparison.csv` | `component` | `runtime_s` |
-| Fourier scan | `fourier_scan_plot.csv` | `fourier_number` | confirmed steps and relative L2 |
-| Grid scan | `grid_scan_plot.csv` | `spatial_points` | confirmed steps and relative L2 |
-| Validated profiles | `working_region_confirmed.csv` | Fourier number / grid | confirmed Trotter configuration |
+| 温度分布 | `temperature_profile.csv` | `x_m` | 解析、经典、CPU 量子、GPU 量子 |
+| 绝对误差 | `temperature_profile.csv` | `x_m` | 各绝对误差列 |
+| 误差分层 | `error_decomposition.csv` | `layer` | `relative_l2_error` |
+| 耗时对比 | `runtime_comparison.csv` | `component` | `runtime_s` |
+| Fourier 扫描 | `fourier_scan_plot.csv` | `fourier_number` | 确认步数与相对 L2 |
+| 网格扫描 | `grid_scan_plot.csv` | `spatial_points` | 确认步数与相对 L2 |
+| 精确档案 | `working_region_confirmed.csv` | Fourier 数 / 网格 | 确认的 Trotter 配置 |
 
-## Data provenance
+## 数据溯源
 
-`manifest.json` records:
+`manifest.json` 记录：
 
-- source result and audit files;
-- source and exported SHA-256 values;
-- row counts and column lists;
-- SI units and boundary-row markers;
-- exact quantum-profile parameters.
+- 来源结果文件与审计文件；
+- 来源文件和导出文件的 SHA-256；
+- 行数与列名；
+- SI 单位与边界行标记；
+- 精确量子档案参数。
 
-The companion workbook is:
+配套工作簿位于：
 
 ```text
 outputs/019fad77-9506-7a03-8bd6-4488117242f5/
 └── thermal_pde_origin_data.xlsx
 ```
 
-Use the CSV manifest when reproducing a figure or checking a plotted dataset.
+复现图表或核对绘图数据时，以 CSV 清单为溯源依据。

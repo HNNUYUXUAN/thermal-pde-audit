@@ -1,8 +1,8 @@
-# Method
+# 方法说明
 
-## Physical model
+## 物理模型
 
-The controlled experiment solves:
+受控实验求解：
 
 ```text
 ∂u/∂t = α ∂²u/∂x²
@@ -10,47 +10,41 @@ u(0,t) = u(L,t) = 0
 u(x,0) = A sin(πx/L)
 ```
 
-with positive diffusivity `α`, domain length `L`, duration `t`, and initial
-amplitude `A`.
+其中热扩散率 `α`、区域长度 `L`、持续时间 `t` 和初始温升 `A` 均为正值。
 
-The continuous reference is:
+连续解析参考为：
 
 ```text
 u(x,t) = A exp[-α(π/L)²t] sin(πx/L)
 ```
 
-## Comparison pipeline
+## 对照流程
 
-1. Normalize the request to SI units.
-2. Evaluate the continuous analytic solution.
-3. Run the explicit finite-difference baseline and verify its stability ratio.
-4. Select an exact measured quantum profile from `Fo` and the spatial grid.
-5. Run the UnitaryLab Schrödingerization circuit on CPU or Biren GPU.
-6. Compare the recovered field with the semi-discrete and continuous
-   references.
-7. Recompute error metrics with NumPy, `torch.supa`, and the project `.su`
-   reduction kernel when requested.
-8. Save the experiment, routes, metrics, audit checks, figures, and
-   reproduction command.
+1. 将需求统一为 SI 单位。
+2. 计算连续解析解。
+3. 运行显式有限差分基线并校验稳定性比例。
+4. 根据 `Fo` 与网格规模选择实测精确量子档案。
+5. 在 CPU 或壁仞 GPU 上执行 UnitaryLab Schrödingerization 量子线路仿真。
+6. 将恢复温度场与半离散参考和连续解析解比较。
+7. 按需使用 NumPy、`torch.supa` 与项目 `.su` 核重复计算误差指标。
+8. 保存实验、设备路由、指标、审计、图表和复现命令。
 
-## Error layers
+## 误差分层
 
-Keep these comparisons distinct:
+分别报告：
 
-- semi-discrete versus continuous analytic;
-- same-parameter Schrödingerization recovery versus semi-discrete;
-- Trotter result versus same-parameter recovery;
-- Trotter result versus continuous analytic;
-- CPU versus GPU;
-- SUPA reductions versus NumPy.
+- 半离散参考与连续解析解；
+- 同参数 Schrödingerization 恢复与半离散参考；
+- Trotter 结果与同参数恢复；
+- Trotter 结果与连续解析解；
+- CPU 与 GPU；
+- SUPA 归约与 NumPy。
 
-This separation identifies discretization, recovery, Trotter, device, and
-reduction effects without conflating them.
+保持这些对照相互独立，以清晰呈现空间离散、辅助恢复、Trotter、设备与归约
+层的差异。
 
-## Attribution
+## 实现归属
 
-UnitaryLab Algorithms supplies the heat-equation Schrödingerization
-implementation. This project supplies the experiment protocol, natural
-language mapping, validated profile selection, device-route adaptation,
-classical and analytic baselines, SUPA reductions, audits, evidence validation,
-and reporting.
+UnitaryLab Algorithms 提供热方程 Schrödingerization 实现。本项目提供实验
+协议、自然语言映射、精确档案选择、设备路由适配、解析与经典基线、双 SUPA
+归约、物理审计、证据验证和报告系统。

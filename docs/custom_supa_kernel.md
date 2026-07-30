@@ -1,9 +1,8 @@
-# Project-owned SUPA Reduction Kernel
+# 项目自研 SUPA 误差归约核
 
-## Purpose
+## 功能
 
-`scripts/supa_error_reduction.su` computes three quantities directly on the
-Biren SUPA device:
+`scripts/supa_error_reduction.su` 直接在壁仞 SUPA 设备上计算：
 
 ```text
 max_abs_error = max |u_quantum - u_reference|
@@ -11,30 +10,29 @@ sum_sq_error  = Σ (u_quantum - u_reference)²
 sum_sq_ref    = Σ u_reference²
 ```
 
-The host converts the reductions into RMSE and relative L2 error and compares
-them with NumPy references.
+主机端据此得到 RMSE 和相对 L2，并与独立 NumPy 参考结果对照。
 
-## Implementation
+## 实现
 
-- one 256-thread block;
-- shared-memory tree reduction;
-- float32 input and accumulation;
-- aligned one-dimensional fields with 1–256 values;
-- JSON output for deterministic integration with the Python audit layer.
+- 单个 256 线程 block；
+- shared-memory 树形归约；
+- float32 输入与累加；
+- 支持 1–256 个值的一维对齐温度场；
+- 输出 JSON，便于 Python 审计层确定性读取。
 
-Build the kernel in the Biren environment:
+在壁仞环境中构建：
 
 ```bash
 bash scripts/build_custom_supa_kernel.sh
 ```
 
-The build produces:
+生成：
 
 ```text
 build/custom_supa/supa_error_reduction.out
 ```
 
-Run it as part of the full workflow:
+在完整工作流中运行：
 
 ```bash
 PYTHONPATH=src python3 -m thermal_pde_audit.cli run \
@@ -48,13 +46,12 @@ PYTHONPATH=src python3 -m thermal_pde_audit.cli run \
   --error-decomposition
 ```
 
-## Verification
+## 一致性验证
 
-The audit performs two independent comparisons:
+审计执行两组独立对照：
 
-1. kernel metrics versus a float32 NumPy reduction;
-2. end-to-end kernel metrics versus the original float64 host data.
+1. `.su` 核指标与 NumPy float32 归约对照；
+2. 端到端 `.su` 核指标与原始主机 float64 数据对照。
 
-The fast and natural-language GPU result bundles both include successful
-custom-kernel evidence. Build and execution logs are stored in
-`results/run_logs/`.
+快速演示和自然语言 GPU 结果包均保存自研核通过证据，构建与运行日志位于
+`results/run_logs/`。

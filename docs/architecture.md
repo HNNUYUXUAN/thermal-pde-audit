@@ -1,57 +1,56 @@
-# Architecture
+# 系统架构
 
-## Overview
+## 总体设计
 
-Thermal PDE Audit separates experiment intent, numerical computation, quantum
-execution, device verification, and reporting into independently testable
-layers.
+热鉴将实验意图、数值计算、量子执行、设备核验与成果报告拆分为可独立测试的
+模块，使一条自然语言需求能够沿清晰、可追踪的路径转化为实验结果。
 
 ```text
-Natural language / JSON
+自然语言 / JSON
         │
         ▼
-Parser + schema validation
+参数解析 + Schema 校验
         │
         ▼
 ThermalExperimentSpec
         │
-        ├── Analytic solution
-        ├── Explicit finite difference
-        └── Quantum profile selection
+        ├── 解析解
+        ├── 显式有限差分
+        └── 精确量子参数档案
                     │
                     ▼
            UnitaryLab CPU / GPU
                     │
           ┌─────────┴─────────┐
           ▼                   ▼
-   Error decomposition   SUPA reductions
+       误差分层          SUPA 设备归约
           │                   │
           └─────────┬─────────┘
                     ▼
-         Physics audit + artifacts
+             物理审计 + 成果包
 ```
 
-## Modules
+## 模块职责
 
-| Module | Role |
+| 模块 | 职责 |
 |---|---|
-| `schema.py` | Defines and validates the controlled experiment protocol |
-| `parser.py` | Maps Chinese or English requests to SI parameters and execution plans |
-| `classical_solver.py` | Computes analytic and explicit finite-difference baselines |
-| `quantum_policy.py` | Selects exact empirically validated quantum profiles |
-| `quantum_solver.py` | Runs the UnitaryLab heat-equation algorithm |
-| `unitarylab_compat.py` | Routes and records CPU/GPU device calls |
-| `error_decomposition.py` | Builds semi-discrete and same-parameter reference layers |
-| `supa_audit.py` | Computes tensor metrics on `supa:0` |
-| `custom_supa_audit.py` | Calls the project-owned `.su` reduction kernel |
-| `physics_audit.py` | Evaluates field and error checks |
-| `reporting.py` | Writes JSON, Markdown, logs, and figures |
-| `evidence_validation.py` | Verifies saved result bundles |
-| `interaction_validation.py` | Verifies Agent/Skill interaction records |
+| `schema.py` | 定义并校验受控实验协议 |
+| `parser.py` | 将中英文需求映射为 SI 参数与执行计划 |
+| `classical_solver.py` | 计算解析解和显式有限差分基线 |
+| `quantum_policy.py` | 选择有实测证据的精确量子参数档案 |
+| `quantum_solver.py` | 执行 UnitaryLab 热方程算法 |
+| `unitarylab_compat.py` | 路由并记录 CPU/GPU 设备调用 |
+| `error_decomposition.py` | 构造半离散与同参数恢复参考 |
+| `supa_audit.py` | 在 `supa:0` 上计算张量误差指标 |
+| `custom_supa_audit.py` | 调用项目自研 `.su` 归约核 |
+| `physics_audit.py` | 执行物理约束与数值误差检查 |
+| `reporting.py` | 生成 JSON、Markdown、日志与图表 |
+| `evidence_validation.py` | 校验保存的结果证据包 |
+| `interaction_validation.py` | 校验 Agent/Skill 交互记录 |
 
-## Experiment contract
+## 实验协议
 
-The controlled problem is a one-dimensional linear heat equation:
+当前受控问题为一维线性热方程：
 
 ```text
 ∂T/∂t = α ∂²T/∂x²
@@ -59,38 +58,34 @@ T(0,t) = T(L,t) = 0
 T(x,0) = A sin(πx/L)
 ```
 
-This contract gives every execution path the same physical scale, grid,
-boundary treatment, and reference solution. Results can therefore be compared
-by maximum absolute error, RMSE, relative L2 error, boundary values, range, and
-decay behavior.
+所有执行路径共享相同的物理尺度、空间网格、边界处理和解析参考，因此可以使用
+最大绝对误差、RMSE、相对 L2、边界值、温度范围和衰减行为进行统一比较。
 
-## Device route
+## 设备路由
 
-The requested device is recorded at the CLI, solver, and lower-level
-Schrödingerization call. The compatibility layer:
+在 CLI、求解器与底层 Schrödingerization 调用三个层级记录请求设备。兼容层：
 
-1. inspects the installed lower-level signature;
-2. routes the requested `cpu` or `gpu` device under a process-wide lock;
-3. records the effective call parameters;
-4. restores the original callable after execution;
-5. closes algorithm log handlers and generated Matplotlib figures.
+1. 检查已安装底层函数签名；
+2. 在进程级锁内路由 `cpu` 或 `gpu`；
+3. 记录实际调用参数与设备；
+4. 执行结束后恢复原始函数；
+5. 关闭算法日志句柄和生成的 Matplotlib 图。
 
-The resulting metadata is saved in `result.json` and checked by
-`validate-result`.
+路由元数据写入 `result.json`，并由 `validate-result` 自动核验。
 
-## Artifact contract
+## 成果契约
 
-Every complete run emits:
+每次完整运行生成：
 
-| Artifact | Purpose |
+| 文件 | 用途 |
 |---|---|
-| `input.json` | Normalized SI experiment |
-| `result.json` | Computed fields, metrics, device route, and provenance |
-| `audit.json` | Physics and numerical checks |
-| `report.md` | Reader-oriented summary and reproduction command |
-| `run.log` | Ordered execution stages |
-| `temperature_comparison.png` | Analytic, classical, and quantum field comparison |
-| `error_decomposition.png` | Semi-discrete, recovery, and Trotter error layers |
+| `input.json` | 规范化 SI 实验参数 |
+| `result.json` | 温度场、指标、设备路由与输入溯源 |
+| `audit.json` | 物理与数值检查结果 |
+| `report.md` | 面向读者的结果说明与复现命令 |
+| `run.log` | 按顺序记录执行阶段 |
+| `temperature_comparison.png` | 解析、经典与量子温度场对比 |
+| `error_decomposition.png` | 半离散、恢复与 Trotter 误差分层 |
 
-UnitaryLab circuit and solution SVGs are stored below `unitarylab_cpu/` and
-`unitarylab_gpu/`.
+UnitaryLab 线路与求解 SVG 分别保存在 `unitarylab_cpu/` 和
+`unitarylab_gpu/`。
