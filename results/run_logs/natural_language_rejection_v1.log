@@ -1,0 +1,30 @@
+case=natural_language_rejection_v1
+started=2026-07-29T20:11:18+08:00
+cwd=/workspace/thermal-pde-audit
+command=python3 -m thermal_pde_audit.cli run-text --text 模拟长度10毫米、热扩散率1e-6平方米每秒、初始温升100K的一维热传导，计算0.1秒，使用CPU，采用周期边界 --output results/natural_language_rejection 
+sdk_env=/usr/local/birensupa/sdk/1.11.0.0.rc2/scripts/brsw_set_env.sh
+sdk_env_loaded=true
+stdout_begin
+[stdout] {
+[stdout]   "status": "rejected",
+[stdout]   "error": {
+[stdout]     "code": "INVALID_EXPERIMENT_SPEC",
+[stdout]     "message": "Experiment specification validation failed.",
+[stdout]     "issues": [
+[stdout]       {
+[stdout]         "field": "boundary",
+[stdout]         "code": "UNSUPPORTED_BOUNDARY",
+[stdout]         "message": "Only zero Dirichlet boundaries are supported.",
+[stdout]         "value": null
+[stdout]       }
+[stdout]     ]
+[stdout]   }
+[stdout] }
+stdout_end
+stderr_begin
+stderr_end
+exit_code=2
+elapsed_ms=179
+generated_files_begin
+generated_files_end
+finished=2026-07-29T20:11:18+08:00

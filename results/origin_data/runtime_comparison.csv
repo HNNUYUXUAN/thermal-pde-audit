@@ -1,0 +1,6 @@
+﻿component,backend,device,runtime_s,notes
+quantum_cpu,unitarylab_cpu,cpu,2.484562162309885,same parameters as GPU reference
+quantum_gpu,unitarylab_gpu,gpu,27.972228333819658,small-field GPU reference run
+torch_supa_total,torch_supa_tensor_reduction,supa:0,0.8918766849674284,transfer and reduction included
+custom_supa_subprocess,custom_supa_reduction_kernel,supa:0,0.023889731615781784,fixed single-block 256-thread kernel
+remote_command_total,record_remote_command,cpu+gpu+supa,35.0,end-to-end recorded wall time

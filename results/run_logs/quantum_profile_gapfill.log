@@ -1,0 +1,1373 @@
+case=quantum_profile_gapfill
+started=2026-07-29T18:51:47+08:00
+cwd=/workspace/thermal-pde-audit
+command=env PYTHONPATH=src python3 scripts/map_quantum_working_region.py --input examples/standard_heat.json --output results/benchmarks/working_region_gapfill --fourier 0.03\,0.05\,0.07 --spatial-points 32 --quantum-steps 1\,2\,4\,8\,16\,32\,64 
+sdk_env=/usr/local/birensupa/sdk/1.11.0.0.rc2/scripts/brsw_set_env.sh
+sdk_env_loaded=true
+stdout_begin
+[stdout] case Fo=0.03 N=32 Nt=1
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.03_n32_nt1/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:51:50.713 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:50.713 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:51:50.811 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:51:50.811 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:51:50.811 [INFO ] - - Final time T = 0.03
+[stdout] 2026-07-29 18:51:50.811 [INFO ] - - Time step dt = 0.03
+[stdout] 2026-07-29 18:51:50.811 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:51:50.811 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:51:50.811 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:51:50.811 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:51:50.811 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:50.811 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:51:50.812 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:51:50.812 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:50.812 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:51:50.812 [INFO ] - - Total time steps: 1
+[stdout] 2026-07-29 18:51:51.910 [INFO ] - - Actual computation time: 1.0977 seconds
+[stdout] 2026-07-29 18:51:51.910 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:51:51.910 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:51.910 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:51:52.222 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:51:52.222 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:52.222 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:51:52.555 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:51:52.555 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:51:52.555 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:52.556 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:51:52.556 [INFO ] - ==================================================
+[stdout] case Fo=0.03 N=32 Nt=2
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.03_n32_nt2/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:51:52.557 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:52.557 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:51:52.564 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:51:52.564 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:51:52.564 [INFO ] - - Final time T = 0.03
+[stdout] 2026-07-29 18:51:52.565 [INFO ] - - Time step dt = 0.015
+[stdout] 2026-07-29 18:51:52.565 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:51:52.565 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:51:52.565 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:51:52.565 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:51:52.565 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:52.565 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:51:52.565 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:51:52.565 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:52.566 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:51:52.566 [INFO ] - - Total time steps: 2
+[stdout] 2026-07-29 18:51:54.160 [INFO ] - - Actual computation time: 1.5939 seconds
+[stdout] 2026-07-29 18:51:54.160 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:51:54.160 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:54.160 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:51:54.462 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:51:54.462 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:54.462 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:51:54.772 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:51:54.772 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:51:54.772 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:54.772 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:51:54.772 [INFO ] - ==================================================
+[stdout] case Fo=0.03 N=32 Nt=4
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.03_n32_nt4/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:51:54.774 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:54.775 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:51:54.783 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:51:54.783 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:51:54.783 [INFO ] - - Final time T = 0.03
+[stdout] 2026-07-29 18:51:54.783 [INFO ] - - Time step dt = 0.0075
+[stdout] 2026-07-29 18:51:54.783 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:51:54.783 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:51:54.783 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:51:54.783 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:51:54.783 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:54.783 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:51:54.784 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:51:54.784 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:54.784 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:51:54.784 [INFO ] - - Total time steps: 4
+[stdout] 2026-07-29 18:51:57.596 [INFO ] - - Actual computation time: 2.8122 seconds
+[stdout] 2026-07-29 18:51:57.596 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:51:57.596 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:57.596 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:51:57.912 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:51:57.912 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:57.912 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:51:58.217 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:51:58.217 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:51:58.217 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:58.217 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:51:58.217 [INFO ] - ==================================================
+[stdout] case Fo=0.03 N=32 Nt=8
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.03_n32_nt8/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:51:58.219 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:58.220 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:51:58.228 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:51:58.228 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:51:58.228 [INFO ] - - Final time T = 0.03
+[stdout] 2026-07-29 18:51:58.228 [INFO ] - - Time step dt = 0.00375
+[stdout] 2026-07-29 18:51:58.228 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:51:58.228 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:51:58.228 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:51:58.228 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:51:58.228 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:58.228 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:51:58.229 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:51:58.229 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:51:58.229 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:51:58.229 [INFO ] - - Total time steps: 8
+[stdout] 2026-07-29 18:52:03.242 [INFO ] - - Actual computation time: 5.0131 seconds
+[stdout] 2026-07-29 18:52:03.243 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:52:03.243 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:03.243 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:52:03.553 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:52:03.553 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:03.553 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:52:03.857 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:52:03.858 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:52:03.858 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:03.858 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:52:03.858 [INFO ] - ==================================================
+[stdout] case Fo=0.03 N=32 Nt=16
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.03_n32_nt16/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:52:03.860 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:03.860 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:52:03.869 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:52:03.869 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:52:03.869 [INFO ] - - Final time T = 0.03
+[stdout] 2026-07-29 18:52:03.869 [INFO ] - - Time step dt = 0.001875
+[stdout] 2026-07-29 18:52:03.869 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:52:03.869 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:52:03.869 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:52:03.869 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:52:03.869 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:03.869 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:52:03.870 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:52:03.870 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:03.870 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:52:03.870 [INFO ] - - Total time steps: 16
+[stdout] 2026-07-29 18:52:13.646 [INFO ] - - Actual computation time: 9.7761 seconds
+[stdout] 2026-07-29 18:52:13.646 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:52:13.646 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:13.646 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:52:13.959 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:52:13.959 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:13.959 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:52:14.296 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:52:14.296 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:52:14.296 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:14.296 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:52:14.296 [INFO ] - ==================================================
+[stdout] completed Fo=0.03 N=32 confirmed=16
+[stdout] case Fo=0.05 N=32 Nt=1
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.05_n32_nt1/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:52:14.299 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:14.299 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:52:14.307 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:52:14.307 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:52:14.307 [INFO ] - - Final time T = 0.05
+[stdout] 2026-07-29 18:52:14.307 [INFO ] - - Time step dt = 0.05
+[stdout] 2026-07-29 18:52:14.307 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:52:14.307 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:52:14.307 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:52:14.307 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:52:14.307 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:14.307 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:52:14.308 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:52:14.308 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:14.308 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:52:14.308 [INFO ] - - Total time steps: 1
+[stdout] 2026-07-29 18:52:15.230 [INFO ] - - Actual computation time: 0.9212 seconds
+[stdout] 2026-07-29 18:52:15.230 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:52:15.230 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:15.230 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:52:15.532 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:52:15.532 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:15.532 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:52:15.838 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:52:15.838 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:52:15.838 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:15.838 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:52:15.838 [INFO ] - ==================================================
+[stdout] case Fo=0.05 N=32 Nt=2
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.05_n32_nt2/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:52:15.841 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:15.841 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:52:15.849 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:52:15.849 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:52:15.849 [INFO ] - - Final time T = 0.05
+[stdout] 2026-07-29 18:52:15.849 [INFO ] - - Time step dt = 0.025
+[stdout] 2026-07-29 18:52:15.849 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:52:15.849 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:52:15.849 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:52:15.849 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:52:15.849 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:15.849 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:52:15.851 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:52:15.851 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:15.851 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:52:15.851 [INFO ] - - Total time steps: 2
+[stdout] 2026-07-29 18:52:17.471 [INFO ] - - Actual computation time: 1.6197 seconds
+[stdout] 2026-07-29 18:52:17.471 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:52:17.471 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:17.471 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:52:17.770 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:52:17.770 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:17.770 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:52:18.166 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:52:18.166 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:52:18.166 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:18.166 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:52:18.166 [INFO ] - ==================================================
+[stdout] case Fo=0.05 N=32 Nt=4
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.05_n32_nt4/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:52:18.168 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:18.168 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:52:18.175 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:52:18.175 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:52:18.175 [INFO ] - - Final time T = 0.05
+[stdout] 2026-07-29 18:52:18.175 [INFO ] - - Time step dt = 0.0125
+[stdout] 2026-07-29 18:52:18.175 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:52:18.175 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:52:18.175 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:52:18.175 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:52:18.175 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:18.175 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:52:18.176 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:52:18.176 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:18.176 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:52:18.176 [INFO ] - - Total time steps: 4
+[stdout] 2026-07-29 18:52:20.872 [INFO ] - - Actual computation time: 2.6959 seconds
+[stdout] 2026-07-29 18:52:20.872 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:52:20.872 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:20.872 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:52:21.182 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:52:21.182 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:21.182 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:52:21.488 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:52:21.488 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:52:21.488 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:21.488 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:52:21.488 [INFO ] - ==================================================
+[stdout] case Fo=0.05 N=32 Nt=8
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.05_n32_nt8/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:52:21.490 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:21.490 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:52:21.498 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:52:21.498 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:52:21.498 [INFO ] - - Final time T = 0.05
+[stdout] 2026-07-29 18:52:21.498 [INFO ] - - Time step dt = 0.00625
+[stdout] 2026-07-29 18:52:21.498 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:52:21.499 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:52:21.499 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:52:21.499 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:52:21.499 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:21.499 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:52:21.499 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:52:21.499 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:21.500 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:52:21.500 [INFO ] - - Total time steps: 8
+[stdout] 2026-07-29 18:52:26.591 [INFO ] - - Actual computation time: 5.0914 seconds
+[stdout] 2026-07-29 18:52:26.591 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:52:26.591 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:26.591 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:52:26.891 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:52:26.891 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:26.891 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:52:27.193 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:52:27.193 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:52:27.193 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:27.193 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:52:27.193 [INFO ] - ==================================================
+[stdout] case Fo=0.05 N=32 Nt=16
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.05_n32_nt16/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:52:27.195 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:27.195 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:52:27.202 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:52:27.202 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:52:27.202 [INFO ] - - Final time T = 0.05
+[stdout] 2026-07-29 18:52:27.202 [INFO ] - - Time step dt = 0.003125
+[stdout] 2026-07-29 18:52:27.202 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:52:27.202 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:52:27.202 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:52:27.202 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:52:27.202 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:27.202 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:52:27.203 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:52:27.203 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:27.203 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:52:27.203 [INFO ] - - Total time steps: 16
+[stdout] 2026-07-29 18:52:36.828 [INFO ] - - Actual computation time: 9.6244 seconds
+[stdout] 2026-07-29 18:52:36.828 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:52:36.828 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:36.828 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:52:37.131 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:52:37.131 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:37.131 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:52:37.466 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:52:37.466 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:52:37.466 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:37.466 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:52:37.466 [INFO ] - ==================================================
+[stdout] case Fo=0.05 N=32 Nt=32
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.05_n32_nt32/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:52:37.468 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:37.468 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:52:37.475 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:52:37.475 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:52:37.475 [INFO ] - - Final time T = 0.05
+[stdout] 2026-07-29 18:52:37.475 [INFO ] - - Time step dt = 0.0015625
+[stdout] 2026-07-29 18:52:37.475 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:52:37.475 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:52:37.475 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:52:37.475 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:52:37.475 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:37.475 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:52:37.476 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:52:37.476 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:37.476 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:52:37.476 [INFO ] - - Total time steps: 32
+[stdout] 2026-07-29 18:52:56.345 [INFO ] - - Actual computation time: 18.8681 seconds
+[stdout] 2026-07-29 18:52:56.345 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:52:56.345 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:56.345 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:52:56.652 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:52:56.652 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:56.652 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:52:56.987 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:52:56.987 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:52:56.987 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:56.987 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:52:56.988 [INFO ] - ==================================================
+[stdout] completed Fo=0.05 N=32 confirmed=32
+[stdout] case Fo=0.07 N=32 Nt=1
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.07_n32_nt1/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:52:56.991 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:56.991 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:52:56.999 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:52:56.999 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:52:56.999 [INFO ] - - Final time T = 0.07
+[stdout] 2026-07-29 18:52:56.999 [INFO ] - - Time step dt = 0.07
+[stdout] 2026-07-29 18:52:56.999 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:52:57.000 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:52:57.000 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:52:57.000 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:52:57.000 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:57.000 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:52:57.000 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:52:57.000 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:57.001 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:52:57.001 [INFO ] - - Total time steps: 1
+[stdout] 2026-07-29 18:52:57.921 [INFO ] - - Actual computation time: 0.9203 seconds
+[stdout] 2026-07-29 18:52:57.921 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:52:57.921 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:57.921 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:52:58.223 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:52:58.224 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:58.224 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:52:58.525 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:52:58.525 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:52:58.525 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:58.525 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:52:58.525 [INFO ] - ==================================================
+[stdout] case Fo=0.07 N=32 Nt=2
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.07_n32_nt2/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:52:58.527 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:58.527 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:52:58.534 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:52:58.534 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:52:58.534 [INFO ] - - Final time T = 0.07
+[stdout] 2026-07-29 18:52:58.534 [INFO ] - - Time step dt = 0.035
+[stdout] 2026-07-29 18:52:58.534 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:52:58.535 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:52:58.535 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:52:58.535 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:52:58.535 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:58.535 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:52:58.535 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:52:58.535 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:52:58.535 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:52:58.535 [INFO ] - - Total time steps: 2
+[stdout] 2026-07-29 18:53:00.159 [INFO ] - - Actual computation time: 1.6232 seconds
+[stdout] 2026-07-29 18:53:00.159 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:53:00.159 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:00.159 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:53:00.467 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:53:00.467 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:00.468 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:53:00.770 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:53:00.770 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:53:00.770 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:00.770 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:53:00.770 [INFO ] - ==================================================
+[stdout] case Fo=0.07 N=32 Nt=4
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.07_n32_nt4/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:53:00.772 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:00.772 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:53:00.779 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:53:00.779 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:53:00.779 [INFO ] - - Final time T = 0.07
+[stdout] 2026-07-29 18:53:00.779 [INFO ] - - Time step dt = 0.0175
+[stdout] 2026-07-29 18:53:00.779 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:53:00.779 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:53:00.779 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:53:00.779 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:53:00.779 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:00.779 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:53:00.780 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:53:00.780 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:00.780 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:53:00.780 [INFO ] - - Total time steps: 4
+[stdout] 2026-07-29 18:53:03.534 [INFO ] - - Actual computation time: 2.7536 seconds
+[stdout] 2026-07-29 18:53:03.534 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:53:03.534 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:03.534 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:53:03.836 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:53:03.836 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:03.836 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:53:04.139 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:53:04.139 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:53:04.139 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:04.139 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:53:04.139 [INFO ] - ==================================================
+[stdout] case Fo=0.07 N=32 Nt=8
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.07_n32_nt8/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:53:04.141 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:04.141 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:53:04.148 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:53:04.148 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:53:04.148 [INFO ] - - Final time T = 0.07
+[stdout] 2026-07-29 18:53:04.148 [INFO ] - - Time step dt = 0.00875
+[stdout] 2026-07-29 18:53:04.148 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:53:04.148 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:53:04.148 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:53:04.148 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:53:04.148 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:04.148 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:53:04.149 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:53:04.149 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:04.149 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:53:04.149 [INFO ] - - Total time steps: 8
+[stdout] 2026-07-29 18:53:09.221 [INFO ] - - Actual computation time: 5.0724 seconds
+[stdout] 2026-07-29 18:53:09.221 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:53:09.222 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:09.222 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:53:09.524 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:53:09.524 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:09.524 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:53:09.828 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:53:09.828 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:53:09.828 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:09.828 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:53:09.828 [INFO ] - ==================================================
+[stdout] case Fo=0.07 N=32 Nt=16
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.07_n32_nt16/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:53:09.831 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:09.831 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:53:09.839 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:53:09.839 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:53:09.839 [INFO ] - - Final time T = 0.07
+[stdout] 2026-07-29 18:53:09.839 [INFO ] - - Time step dt = 0.004375
+[stdout] 2026-07-29 18:53:09.839 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:53:09.839 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:53:09.839 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:53:09.839 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:53:09.839 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:09.839 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:53:09.840 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:53:09.840 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:09.840 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:53:09.840 [INFO ] - - Total time steps: 16
+[stdout] 2026-07-29 18:53:19.507 [INFO ] - - Actual computation time: 9.6673 seconds
+[stdout] 2026-07-29 18:53:19.508 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:53:19.508 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:19.508 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:53:19.811 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:53:19.811 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:19.811 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:53:20.147 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:53:20.147 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:53:20.147 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:20.147 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:53:20.147 [INFO ] - ==================================================
+[stdout] case Fo=0.07 N=32 Nt=32
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/benchmarks/working_region_gapfill/raw/fo0.07_n32_nt32/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 18:53:20.149 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:20.149 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 18:53:20.157 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 18:53:20.157 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 18:53:20.157 [INFO ] - - Final time T = 0.07
+[stdout] 2026-07-29 18:53:20.157 [INFO ] - - Time step dt = 0.0021875
+[stdout] 2026-07-29 18:53:20.157 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 18:53:20.157 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 18:53:20.157 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 18:53:20.157 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 18:53:20.157 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:20.157 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 18:53:20.158 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 18:53:20.158 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:20.158 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 18:53:20.158 [INFO ] - - Total time steps: 32
+[stdout] 2026-07-29 18:53:38.878 [INFO ] - - Actual computation time: 18.7204 seconds
+[stdout] 2026-07-29 18:53:38.879 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 18:53:38.879 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:38.879 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 18:53:39.187 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 18:53:39.187 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:39.187 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 18:53:39.643 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 18:53:39.643 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 18:53:39.643 [INFO ] - ==================================================
+[stdout] 2026-07-29 18:53:39.643 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 18:53:39.643 [INFO ] - ==================================================
+[stdout] completed Fo=0.07 N=32 confirmed=32
+[stdout] {
+[stdout]   "task": "empirical_quantum_working_region",
+[stdout]   "status": "completed",
+[stdout]   "input_template": "/workspace/thermal-pde-audit/examples/standard_heat.json",
+[stdout]   "device": "cpu",
+[stdout]   "fourier_numbers": [
+[stdout]     0.03,
+[stdout]     0.05,
+[stdout]     0.07
+[stdout]   ],
+[stdout]   "spatial_points": [
+[stdout]     32
+[stdout]   ],
+[stdout]   "candidate_quantum_steps": [
+[stdout]     1,
+[stdout]     2,
+[stdout]     4,
+[stdout]     8,
+[stdout]     16,
+[stdout]     32,
+[stdout]     64
+[stdout]   ],
+[stdout]   "ancilla_qubits": 8,
+[stdout]   "auxiliary_range": 16.0,
+[stdout]   "recovery_point": 1,
+[stdout]   "strict_relative_l2_threshold": 0.02,
+[stdout]   "confirmation_rule": "2 consecutive candidate Nt values must pass the full physics audit and strict relative-L2 threshold.",
+[stdout]   "cases": [
+[stdout]     {
+[stdout]       "fourier_number": 0.03,
+[stdout]       "spatial_points": 32,
+[stdout]       "physical_duration_s": 0.25,
+[stdout]       "classical_time_steps": 200,
+[stdout]       "runs": [
+[stdout]         {
+[stdout]           "requested_nt": 1,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 1.8425678168423474,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.03_n32_nt1",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 1,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": false,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 70.03010662864476,
+[stdout]             "rmse": 45.97686362499604,
+[stdout]             "relative_l2_error": 0.8609180253645393
+[stdout]           },
+[stdout]           "physics_audit_passed": false,
+[stdout]           "min_k": -8.925104886293411,
+[stdout]           "max_k": 144.31805610656738,
+[stdout]           "effective_nt": 1
+[stdout]         },
+[stdout]         {
+[stdout]           "requested_nt": 2,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 2.2151149483397603,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.03_n32_nt2",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 2,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": false,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 11.283759748232086,
+[stdout]             "rmse": 7.703530658443003,
+[stdout]             "relative_l2_error": 0.14424882168770403
+[stdout]           },
+[stdout]           "physics_audit_passed": true,
+[stdout]           "min_k": 8.373909443616867,
+[stdout]           "max_k": 63.00418972969055,
+[stdout]           "effective_nt": 2
+[stdout]         },
+[stdout]         {
+[stdout]           "requested_nt": 4,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 3.44308927282691,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.03_n32_nt4",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 4,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": false,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 2.088217412721832,
+[stdout]             "rmse": 1.4235117131093455,
+[stdout]             "relative_l2_error": 0.026655295653249242
+[stdout]           },
+[stdout]           "physics_audit_passed": true,
+[stdout]           "min_k": 7.322315871715546,
+[stdout]           "max_k": 72.1997320652008,
+[stdout]           "effective_nt": 4
+[stdout]         },
+[stdout]         {
+[stdout]           "requested_nt": 8,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 5.638784507289529,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.03_n32_nt8",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 8,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": true,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 0.5343362443563535,
+[stdout]             "rmse": 0.36516316844828955,
+[stdout]             "relative_l2_error": 0.006837690288761778
+[stdout]           },
+[stdout]           "physics_audit_passed": true,
+[stdout]           "min_k": 7.125302404165268,
+[stdout]           "max_k": 73.75361323356628,
+[stdout]           "effective_nt": 8
+[stdout]         },
+[stdout]         {
+[stdout]           "requested_nt": 16,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 10.436281956266612,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.03_n32_nt16",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 16,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": true,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 0.20109263588162207,
+[stdout]             "rmse": 0.1398817153748231,
+[stdout]             "relative_l2_error": 0.002619288935568571
+[stdout]           },
+[stdout]           "physics_audit_passed": true,
+[stdout]           "min_k": 7.07663893699646,
+[stdout]           "max_k": 74.08685684204102,
+[stdout]           "effective_nt": 16
+[stdout]         }
+[stdout]       ],
+[stdout]       "first_strict_pass": 8,
+[stdout]       "confirmed_quantum_steps": 16,
+[stdout]       "confirmed_streak": [
+[stdout]         8,
+[stdout]         16
+[stdout]       ]
+[stdout]     },
+[stdout]     {
+[stdout]       "fourier_number": 0.05,
+[stdout]       "spatial_points": 32,
+[stdout]       "physical_duration_s": 0.4166666666666667,
+[stdout]       "classical_time_steps": 200,
+[stdout]       "runs": [
+[stdout]         {
+[stdout]           "requested_nt": 1,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 1.5400308007374406,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.05_n32_nt1",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 1,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": false,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 35.05891557052641,
+[stdout]             "rmse": 24.8609434018276,
+[stdout]             "relative_l2_error": 0.567108763420255
+[stdout]           },
+[stdout]           "physics_audit_passed": false,
+[stdout]           "min_k": -0.1981482608243823,
+[stdout]           "max_k": 96.03956937789917,
+[stdout]           "effective_nt": 1
+[stdout]         },
+[stdout]         {
+[stdout]           "requested_nt": 2,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 2.3261682027950883,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.05_n32_nt2",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 2,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": false,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 60.77711390199042,
+[stdout]             "rmse": 43.74789780288445,
+[stdout]             "relative_l2_error": 0.9979434739956669
+[stdout]           },
+[stdout]           "physics_audit_passed": false,
+[stdout]           "min_k": -0.4467237275093794,
+[stdout]           "max_k": 0.6766602862626314,
+[stdout]           "effective_nt": 2
+[stdout]         },
+[stdout]         {
+[stdout]           "requested_nt": 4,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 3.3204966951161623,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.05_n32_nt4",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 4,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": false,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 8.671575829238613,
+[stdout]             "rmse": 5.977709924184076,
+[stdout]             "relative_l2_error": 0.1363589316944347
+[stdout]           },
+[stdout]           "physics_audit_passed": true,
+[stdout]           "min_k": 6.148569285869598,
+[stdout]           "max_k": 52.309077978134155,
+[stdout]           "effective_nt": 4
+[stdout]         },
+[stdout]         {
+[stdout]           "requested_nt": 8,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 5.703509849961847,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.05_n32_nt8",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 8,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": false,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 1.6517545665539117,
+[stdout]             "rmse": 1.1729727508397914,
+[stdout]             "relative_l2_error": 0.026756954291827385
+[stdout]           },
+[stdout]           "physics_audit_passed": true,
+[stdout]           "min_k": 5.843086540699005,
+[stdout]           "max_k": 59.33655500411987,
+[stdout]           "effective_nt": 8
+[stdout]         },
+[stdout]         {
+[stdout]           "requested_nt": 16,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 10.271118451841176,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.05_n32_nt16",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 16,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": true,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 0.3203000510967584,
+[stdout]             "rmse": 0.225911107850921,
+[stdout]             "relative_l2_error": 0.005153310835614446
+[stdout]           },
+[stdout]           "physics_audit_passed": true,
+[stdout]           "min_k": 5.815158039331436,
+[stdout]           "max_k": 60.670632123947144,
+[stdout]           "effective_nt": 16
+[stdout]         },
+[stdout]         {
+[stdout]           "requested_nt": 32,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 19.520131536759436,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.05_n32_nt32",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 32,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": true,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 0.020777071964786842,
+[stdout]             "rmse": 0.013008361361109059,
+[stdout]             "relative_l2_error": 0.00029673675718517044
+[stdout]           },
+[stdout]           "physics_audit_passed": true,
+[stdout]           "min_k": 5.8123622089624405,
+[stdout]           "max_k": 60.966479778289795,
+[stdout]           "effective_nt": 32
+[stdout]         }
+[stdout]       ],
+[stdout]       "first_strict_pass": 16,
+[stdout]       "confirmed_quantum_steps": 32,
+[stdout]       "confirmed_streak": [
+[stdout]         16,
+[stdout]         32
+[stdout]       ]
+[stdout]     },
+[stdout]     {
+[stdout]       "fourier_number": 0.07,
+[stdout]       "spatial_points": 32,
+[stdout]       "physical_duration_s": 0.5833333333333334,
+[stdout]       "classical_time_steps": 200,
+[stdout]       "runs": [
+[stdout]         {
+[stdout]           "requested_nt": 1,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 1.5352455889806151,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.07_n32_nt1",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 1,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": false,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 83.63062352586269,
+[stdout]             "rmse": 75.60337212815189,
+[stdout]             "relative_l2_error": 2.1009524091751772
+[stdout]           },
+[stdout]           "physics_audit_passed": false,
+[stdout]           "min_k": 63.97475004196167,
+[stdout]           "max_k": 133.68773460388184,
+[stdout]           "effective_nt": 1
+[stdout]         },
+[stdout]         {
+[stdout]           "requested_nt": 2,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 2.2429859158582985,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.07_n32_nt2",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 2,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": false,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 90.73244542527675,
+[stdout]             "rmse": 61.71547359783681,
+[stdout]             "relative_l2_error": 1.7150197046631637
+[stdout]           },
+[stdout]           "physics_audit_passed": false,
+[stdout]           "min_k": -2.711682580411434,
+[stdout]           "max_k": 140.7895565032959,
+[stdout]           "effective_nt": 2
+[stdout]         },
+[stdout]         {
+[stdout]           "requested_nt": 4,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 3.367398933041841,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.07_n32_nt4",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 4,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": false,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 23.006386452431677,
+[stdout]             "rmse": 16.362149223648103,
+[stdout]             "relative_l2_error": 0.45468999415049705
+[stdout]           },
+[stdout]           "physics_audit_passed": false,
+[stdout]           "min_k": 3.674626350402832,
+[stdout]           "max_k": 27.050724625587463,
+[stdout]           "effective_nt": 4
+[stdout]         },
+[stdout]         {
+[stdout]           "requested_nt": 8,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 5.688114443793893,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.07_n32_nt8",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 8,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": false,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 4.081515365357397,
+[stdout]             "rmse": 2.8897570830014403,
+[stdout]             "relative_l2_error": 0.08030385331452965
+[stdout]           },
+[stdout]           "physics_audit_passed": true,
+[stdout]           "min_k": 4.649537429213524,
+[stdout]           "max_k": 45.97559571266174,
+[stdout]           "effective_nt": 8
+[stdout]         },
+[stdout]         {
+[stdout]           "requested_nt": 16,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 10.317278382834047,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.07_n32_nt16",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 16,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": true,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 0.8898684318017942,
+[stdout]             "rmse": 0.6249157062673798,
+[stdout]             "relative_l2_error": 0.01736586770744022
+[stdout]           },
+[stdout]           "physics_audit_passed": true,
+[stdout]           "min_k": 4.755650088191032,
+[stdout]           "max_k": 49.167242646217346,
+[stdout]           "effective_nt": 16
+[stdout]         },
+[stdout]         {
+[stdout]           "requested_nt": 32,
+[stdout]           "status": "success",
+[stdout]           "runtime_s": 19.494318432174623,
+[stdout]           "artifact_directory": "results/benchmarks/working_region_gapfill/raw/fo0.07_n32_nt32",
+[stdout]           "route": [
+[stdout]             {
+[stdout]               "device": "cpu",
+[stdout]               "requested_device": "cpu",
+[stdout]               "device_was_injected": true,
+[stdout]               "device_matches_requested": true,
+[stdout]               "Nt": 32,
+[stdout]               "na": 8,
+[stdout]               "R": 16,
+[stdout]               "order": 2,
+[stdout]               "point": 1
+[stdout]             }
+[stdout]           ],
+[stdout]           "route_compatibility": {
+[stdout]             "strategy": "scoped_process_lock_and_call_recording",
+[stdout]             "requested_device": "cpu",
+[stdout]             "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]             "lock_scope": "current Python process",
+[stdout]             "injection_count": 1,
+[stdout]             "forwarded_count": 0,
+[stdout]             "conflict_count": 0,
+[stdout]             "all_devices_match_requested": true,
+[stdout]             "restored": true
+[stdout]           },
+[stdout]           "log_handler_cleanup": {
+[stdout]             "observed": 3,
+[stdout]             "closed": 3,
+[stdout]             "errors": []
+[stdout]           },
+[stdout]           "strict_accuracy_passed": true,
+[stdout]           "metrics_vs_analytic": {
+[stdout]             "max_abs_error": 0.16478984903812233,
+[stdout]             "rmse": 0.11473366213905431,
+[stdout]             "relative_l2_error": 0.0031883493698659894
+[stdout]           },
+[stdout]           "physics_audit_passed": true,
+[stdout]           "min_k": 4.767308011651039,
+[stdout]           "max_k": 49.89232122898102,
+[stdout]           "effective_nt": 32
+[stdout]         }
+[stdout]       ],
+[stdout]       "first_strict_pass": 16,
+[stdout]       "confirmed_quantum_steps": 32,
+[stdout]       "confirmed_streak": [
+[stdout]         16,
+[stdout]         32
+[stdout]       ]
+[stdout]     }
+[stdout]   ],
+[stdout]   "resolved_cases": 3,
+[stdout]   "unresolved_cases": [],
+[stdout]   "elapsed_s": 111.8999107722193,
+[stdout]   "limitations": [
+[stdout]     "This is an empirical map for the installed versions and controlled sine/Dirichlet problem, not a convergence theorem.",
+[stdout]     "Candidate Nt values are discrete powers of two and a non-monotonic failure can occur between passing values.",
+[stdout]     "Raw UnitaryLab plots and logs are retained remotely under the reported raw directories."
+[stdout]   ]
+[stdout] }
+stdout_end
+stderr_begin
+stderr_end
+exit_code=0
+elapsed_ms=113460
+generated_files_begin
+generated_files_end
+finished=2026-07-29T18:53:41+08:00

@@ -1,0 +1,399 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "finite_nonempty_field",
+      "target": "classical",
+      "passed": true,
+      "value": {
+        "size": 34,
+        "all_finite": true
+      },
+      "threshold": {
+        "min_size": 1,
+        "all_finite": true
+      },
+      "explanation": "The result must not be empty and must contain no NaN or Inf."
+    },
+    {
+      "name": "boundary_residual",
+      "target": "classical",
+      "passed": true,
+      "value": 0.0,
+      "threshold": 1e-08,
+      "explanation": "Residual uses the two boundary nodes returned by the solver."
+    },
+    {
+      "name": "maximum_principle_range",
+      "target": "classical",
+      "passed": true,
+      "value": {
+        "min_k": 0.0,
+        "max_k": 55.225822132680996
+      },
+      "threshold": {
+        "min_k": -0.001,
+        "max_k": 100.001
+      },
+      "explanation": "Positive diffusion with zero boundaries must not create a new extremum."
+    },
+    {
+      "name": "positive_diffusivity_decay",
+      "target": "classical",
+      "passed": true,
+      "value": 55.225822132680996,
+      "threshold": 100.000001,
+      "explanation": "The final field amplitude must not exceed the initial amplitude."
+    },
+    {
+      "name": "max_abs_error",
+      "target": "classical",
+      "passed": true,
+      "value": 0.02375127061227289,
+      "threshold": 15.0,
+      "explanation": "Maximum pointwise error against the analytic solution."
+    },
+    {
+      "name": "rmse",
+      "target": "classical",
+      "passed": true,
+      "value": 0.01656462271437014,
+      "threshold": 15.0,
+      "explanation": "Root-mean-square error against the analytic solution."
+    },
+    {
+      "name": "relative_l2_error",
+      "target": "classical",
+      "passed": true,
+      "value": 0.0004298905701749726,
+      "threshold": 0.2,
+      "explanation": "Relative L2 error against the analytic solution."
+    },
+    {
+      "name": "finite_difference_stability",
+      "target": "classical",
+      "passed": true,
+      "value": 0.32670000000000005,
+      "threshold": 0.5,
+      "explanation": "Explicit finite difference requires r <= 0.5."
+    },
+    {
+      "name": "finite_nonempty_field",
+      "target": "quantum",
+      "passed": true,
+      "value": {
+        "size": 32,
+        "all_finite": true
+      },
+      "threshold": {
+        "min_size": 1,
+        "all_finite": true
+      },
+      "explanation": "The result must not be empty and must contain no NaN or Inf."
+    },
+    {
+      "name": "boundary_residual",
+      "target": "quantum",
+      "passed": true,
+      "value": 0.0,
+      "threshold": 1e-08,
+      "explanation": "UnitaryLab returned interior nodes only. This residual is for the zero Dirichlet values applied by the controlled protocol, not an independent boundary value emitted by UnitaryLab."
+    },
+    {
+      "name": "maximum_principle_range",
+      "target": "quantum",
+      "passed": true,
+      "value": {
+        "min_k": 5.271061509847641,
+        "max_k": 55.17943501472473
+      },
+      "threshold": {
+        "min_k": -0.001,
+        "max_k": 100.001
+      },
+      "explanation": "Positive diffusion with zero boundaries must not create a new extremum."
+    },
+    {
+      "name": "positive_diffusivity_decay",
+      "target": "quantum",
+      "passed": true,
+      "value": 55.17943501472473,
+      "threshold": 100.000001,
+      "explanation": "The final field amplitude must not exceed the initial amplitude."
+    },
+    {
+      "name": "max_abs_error",
+      "target": "quantum",
+      "passed": true,
+      "value": 0.07013838856853738,
+      "threshold": 15.0,
+      "explanation": "Maximum pointwise error against the analytic solution."
+    },
+    {
+      "name": "rmse",
+      "target": "quantum",
+      "passed": true,
+      "value": 0.04664108739847566,
+      "threshold": 15.0,
+      "explanation": "Root-mean-square error against the analytic solution."
+    },
+    {
+      "name": "relative_l2_error",
+      "target": "quantum",
+      "passed": true,
+      "value": 0.0011743040749737114,
+      "threshold": 0.2,
+      "explanation": "Relative L2 error against the analytic solution."
+    },
+    {
+      "name": "cpu_gpu_max_difference",
+      "target": "quantum",
+      "passed": true,
+      "value": 0.0002987682819366455,
+      "threshold": 0.001,
+      "explanation": "Maximum aligned UnitaryLab CPU/GPU field difference. The threshold is 1e-5 times max(1 K, initial amplitude)."
+    },
+    {
+      "name": "schrodingerization_error_decomposition",
+      "target": "error_decomposition",
+      "passed": true,
+      "value": {
+        "status": "success",
+        "recovery_status": "success"
+      },
+      "threshold": {
+        "status": "success",
+        "recovery_status": "success"
+      },
+      "explanation": "The same run must produce an independent semi-discrete reference and same-parameter UnitaryLab recovery diagnostic."
+    },
+    {
+      "name": "supa_error_metric_consistency",
+      "target": "supa_audit",
+      "passed": true,
+      "value": {
+        "passed": true,
+        "reduction_vs_roundtrip_cpu": {
+          "passed": true,
+          "absolute_differences": {
+            "max_abs_error": 0.0,
+            "rmse": 2.461190869162966e-09,
+            "relative_l2_error": 1.0017510996065959e-10
+          },
+          "threshold": 1e-08
+        },
+        "end_to_end_vs_source_cpu": {
+          "passed": true,
+          "absolute_differences": {
+            "max_abs_error": 1.364642756129797e-06,
+            "rmse": 1.5436058615342363e-07,
+            "relative_l2_error": 4.051818600254997e-09
+          },
+          "threshold": 1e-05
+        },
+        "host_device_roundtrip_max_abs_k": {
+          "actual": 1.430511474609375e-06,
+          "reference": 1.6515486365165089e-06
+        }
+      },
+      "threshold": {
+        "status": "success",
+        "reduction_vs_roundtrip_cpu": "1e-8",
+        "end_to_end_vs_source_cpu": "1e-5"
+      },
+      "explanation": "Real torch.supa reductions must match independent NumPy metrics."
+    }
+  ],
+  "layers": {
+    "classical": {
+      "passed": true,
+      "thresholds": {
+        "boundary_residual_k": 1e-08,
+        "max_range_relative": 1e-05,
+        "decay_relative": 1e-08,
+        "max_abs_error_k": 15.0,
+        "relative_l2_error": 0.2,
+        "cpu_gpu_max_diff_relative": 1e-05,
+        "finite_difference_r": 0.5
+      },
+      "metrics": {
+        "max_abs_error": 0.02375127061227289,
+        "rmse": 0.01656462271437014,
+        "relative_l2_error": 0.0004298905701749726
+      },
+      "checks": [
+        {
+          "name": "finite_nonempty_field",
+          "target": "classical",
+          "passed": true,
+          "value": {
+            "size": 34,
+            "all_finite": true
+          },
+          "threshold": {
+            "min_size": 1,
+            "all_finite": true
+          },
+          "explanation": "The result must not be empty and must contain no NaN or Inf."
+        },
+        {
+          "name": "boundary_residual",
+          "target": "classical",
+          "passed": true,
+          "value": 0.0,
+          "threshold": 1e-08,
+          "explanation": "Residual uses the two boundary nodes returned by the solver."
+        },
+        {
+          "name": "maximum_principle_range",
+          "target": "classical",
+          "passed": true,
+          "value": {
+            "min_k": 0.0,
+            "max_k": 55.225822132680996
+          },
+          "threshold": {
+            "min_k": -0.001,
+            "max_k": 100.001
+          },
+          "explanation": "Positive diffusion with zero boundaries must not create a new extremum."
+        },
+        {
+          "name": "positive_diffusivity_decay",
+          "target": "classical",
+          "passed": true,
+          "value": 55.225822132680996,
+          "threshold": 100.000001,
+          "explanation": "The final field amplitude must not exceed the initial amplitude."
+        },
+        {
+          "name": "max_abs_error",
+          "target": "classical",
+          "passed": true,
+          "value": 0.02375127061227289,
+          "threshold": 15.0,
+          "explanation": "Maximum pointwise error against the analytic solution."
+        },
+        {
+          "name": "rmse",
+          "target": "classical",
+          "passed": true,
+          "value": 0.01656462271437014,
+          "threshold": 15.0,
+          "explanation": "Root-mean-square error against the analytic solution."
+        },
+        {
+          "name": "relative_l2_error",
+          "target": "classical",
+          "passed": true,
+          "value": 0.0004298905701749726,
+          "threshold": 0.2,
+          "explanation": "Relative L2 error against the analytic solution."
+        },
+        {
+          "name": "finite_difference_stability",
+          "target": "classical",
+          "passed": true,
+          "value": 0.32670000000000005,
+          "threshold": 0.5,
+          "explanation": "Explicit finite difference requires r <= 0.5."
+        }
+      ]
+    },
+    "quantum": {
+      "passed": true,
+      "thresholds": {
+        "boundary_residual_k": 1e-08,
+        "max_range_relative": 1e-05,
+        "decay_relative": 1e-08,
+        "max_abs_error_k": 15.0,
+        "relative_l2_error": 0.2,
+        "cpu_gpu_max_diff_relative": 1e-05,
+        "finite_difference_r": 0.5
+      },
+      "metrics": {
+        "max_abs_error": 0.07013838856853738,
+        "rmse": 0.04664108739847566,
+        "relative_l2_error": 0.0011743040749737114
+      },
+      "checks": [
+        {
+          "name": "finite_nonempty_field",
+          "target": "quantum",
+          "passed": true,
+          "value": {
+            "size": 32,
+            "all_finite": true
+          },
+          "threshold": {
+            "min_size": 1,
+            "all_finite": true
+          },
+          "explanation": "The result must not be empty and must contain no NaN or Inf."
+        },
+        {
+          "name": "boundary_residual",
+          "target": "quantum",
+          "passed": true,
+          "value": 0.0,
+          "threshold": 1e-08,
+          "explanation": "UnitaryLab returned interior nodes only. This residual is for the zero Dirichlet values applied by the controlled protocol, not an independent boundary value emitted by UnitaryLab."
+        },
+        {
+          "name": "maximum_principle_range",
+          "target": "quantum",
+          "passed": true,
+          "value": {
+            "min_k": 5.271061509847641,
+            "max_k": 55.17943501472473
+          },
+          "threshold": {
+            "min_k": -0.001,
+            "max_k": 100.001
+          },
+          "explanation": "Positive diffusion with zero boundaries must not create a new extremum."
+        },
+        {
+          "name": "positive_diffusivity_decay",
+          "target": "quantum",
+          "passed": true,
+          "value": 55.17943501472473,
+          "threshold": 100.000001,
+          "explanation": "The final field amplitude must not exceed the initial amplitude."
+        },
+        {
+          "name": "max_abs_error",
+          "target": "quantum",
+          "passed": true,
+          "value": 0.07013838856853738,
+          "threshold": 15.0,
+          "explanation": "Maximum pointwise error against the analytic solution."
+        },
+        {
+          "name": "rmse",
+          "target": "quantum",
+          "passed": true,
+          "value": 0.04664108739847566,
+          "threshold": 15.0,
+          "explanation": "Root-mean-square error against the analytic solution."
+        },
+        {
+          "name": "relative_l2_error",
+          "target": "quantum",
+          "passed": true,
+          "value": 0.0011743040749737114,
+          "threshold": 0.2,
+          "explanation": "Relative L2 error against the analytic solution."
+        },
+        {
+          "name": "cpu_gpu_max_difference",
+          "target": "quantum",
+          "passed": true,
+          "value": 0.0002987682819366455,
+          "threshold": 0.001,
+          "explanation": "Maximum aligned UnitaryLab CPU/GPU field difference. The threshold is 1e-5 times max(1 K, initial amplitude)."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Thermal PDE Audit"
+  short_description: "Physics-validated quantum heat simulation workflow"
+  default_prompt: "Use $thermal-pde-audit to turn a 1D heat-transfer request into a validated CPU/GPU quantum simulation report."

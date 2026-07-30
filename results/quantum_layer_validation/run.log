@@ -1,0 +1,17 @@
+started=2026-07-29T19:42:21+0800
+input={"task": "heat_equation_1d", "length_m": 0.01, "thermal_diffusivity_m2_s": 1.2e-05, "initial_amplitude_k": 100.0, "duration_s": 0.5, "spatial_points": 32, "time_steps": 200, "boundary": "dirichlet_zero", "initial_condition": "sine_mode_1", "device": "gpu", "seed": 42}
+stage=analytic begin
+stage=analytic success
+stage=classical begin
+stage=classical success
+stage=quantum_cpu_reference begin
+stage=quantum_cpu_reference success
+stage=quantum_gpu begin
+stage=quantum_gpu success
+stage=error_decomposition begin
+stage=error_decomposition success
+stage=supa_error_audit begin
+stage=supa_error_audit success
+audit_passed=True
+result_status=success
+finished=2026-07-29T19:49:29+0800

@@ -1,0 +1,30 @@
+2026-07-29 14:12:52.660 [INFO ] - ==================================================
+2026-07-29 14:12:52.660 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+2026-07-29 14:12:52.668 [INFO ] - - Diffusion coefficient a = 1
+2026-07-29 14:12:52.668 [INFO ] - - Computation domain length L = 1
+2026-07-29 14:12:52.668 [INFO ] - - Final time T = 0.0009999999999999998
+2026-07-29 14:12:52.668 [INFO ] - - Time step dt = 0.0009999999999999998
+2026-07-29 14:12:52.668 [INFO ] - - Spatial qubits nx = 5
+2026-07-29 14:12:52.668 [INFO ] - - Ancilla qubits na = 5
+2026-07-29 14:12:52.668 [INFO ] - - Boundary condition: dirichlet
+2026-07-29 14:12:52.668 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+2026-07-29 14:12:52.668 [INFO ] - ==================================================
+2026-07-29 14:12:52.668 [INFO ] - Stage 2/5: Building quantum circuit...
+2026-07-29 14:12:52.669 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+2026-07-29 14:12:52.669 [INFO ] - ==================================================
+2026-07-29 14:12:52.669 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+2026-07-29 14:12:52.669 [INFO ] - - Total time steps: 1
+2026-07-29 14:12:54.211 [INFO ] - - Actual computation time: 1.5425 seconds
+2026-07-29 14:12:54.212 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+2026-07-29 14:12:54.212 [INFO ] - ==================================================
+2026-07-29 14:12:54.212 [INFO ] - Stage 4/5: Generating solution visualization...
+2026-07-29 14:12:54.484 [DEBUG] - Solution plot saved to: /workspace/thermal-pde-audit/results/benchmarks/higher_diffusivity/unitarylab_gpu/1D_Heat_Lie-Trotter_nx=5_na=5_T=0.0009999999999999998_dt=0.0009999999999999998_solution.svg
+2026-07-29 14:12:54.484 [INFO ] - Stage 4/5: Solution visualization complete ✓
+2026-07-29 14:12:54.484 [INFO ] - ==================================================
+2026-07-29 14:12:54.484 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+2026-07-29 14:12:54.861 [DEBUG] - Quantum circuit diagrams saved to: /workspace/thermal-pde-audit/results/benchmarks/higher_diffusivity/unitarylab_gpu
+2026-07-29 14:12:54.861 [INFO ] - Generated 2 quantum circuit diagrams
+2026-07-29 14:12:54.861 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+2026-07-29 14:12:54.861 [INFO ] - ==================================================
+2026-07-29 14:12:54.861 [INFO ] - All stages complete, computation successful！
+2026-07-29 14:12:54.861 [INFO ] - ==================================================

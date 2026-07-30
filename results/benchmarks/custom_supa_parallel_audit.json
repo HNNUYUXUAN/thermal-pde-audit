@@ -1,0 +1,68 @@
+{
+  "backend": "custom_supa_reduction_kernel",
+  "device": "supa:0",
+  "dtype": "float32",
+  "status": "success",
+  "kernel_source": "scripts/supa_error_reduction.su",
+  "executable": "/workspace/thermal-pde-audit/build/custom_supa/supa_error_reduction.out",
+  "metrics": {
+    "max_abs_error": 0.00982666015625,
+    "rmse": 0.00713051250204,
+    "relative_l2_error": 0.000100285949884
+  },
+  "cpu_float32_metrics": {
+    "max_abs_error": 0.00982666015625,
+    "rmse": 0.007130512601897345,
+    "relative_l2_error": 0.00010028594746605305
+  },
+  "cpu_source_float64_metrics": {
+    "max_abs_error": 0.009826979494448551,
+    "rmse": 0.007130176547467133,
+    "relative_l2_error": 0.00010028122145663477
+  },
+  "consistency": {
+    "passed": true,
+    "kernel_vs_float32_cpu": {
+      "passed": true,
+      "absolute_differences": {
+        "max_abs_error": 0.0,
+        "rmse": 9.985734461537277e-11,
+        "relative_l2_error": 2.417946946180541e-12
+      },
+      "threshold": 1e-06
+    },
+    "end_to_end_vs_source_float64_cpu": {
+      "passed": true,
+      "absolute_differences": {
+        "max_abs_error": 3.1933819855112233e-07,
+        "rmse": 3.359545728675445e-07,
+        "relative_l2_error": 4.728427365228776e-09
+      },
+      "threshold": 1e-05
+    }
+  },
+  "runtime_s": {
+    "subprocess_total": 0.023266450967639685
+  },
+  "warnings": [
+    "The custom kernel uses one 256-thread SUPA block and shared-memory tree reduction for fields of at most 256 values. It does not implement a multi-block/global reduction.",
+    "The kernel accumulates in float32. Independent float32 and source-float64 checks use separate tolerances."
+  ],
+  "process": {
+    "exit_code": 0,
+    "stderr": ""
+  },
+  "raw_kernel_result": {
+    "backend": "custom_supa_reduction_kernel",
+    "device": "supa:0",
+    "dtype": "float32",
+    "kernel_mode": "single_block_tree_reduction",
+    "launched_threads": 256,
+    "count": 32,
+    "max_abs_error": 0.00982666015625,
+    "squared_error_sum": 0.00162701471709,
+    "squared_reference_sum": 161774.96875,
+    "rmse": 0.00713051250204,
+    "relative_l2_error": 0.000100285949884
+  }
+}

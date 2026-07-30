@@ -1,0 +1,87 @@
+case=final_minimal_gpu_validation_v1
+started=2026-07-29T21:21:32+08:00
+cwd=/workspace/thermal-pde-audit
+command=bash scripts/run_demo.sh 
+sdk_env=/usr/local/birensupa/sdk/1.11.0.0.rc2/scripts/brsw_set_env.sh
+sdk_env_loaded=true
+stdout_begin
+[stdout] custom_supa_kernel=/workspace/thermal-pde-audit/build/custom_supa/supa_error_reduction.out
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/fast_quantum_validation/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 21:21:36.339 [INFO ] - ==================================================
+[stdout] 2026-07-29 21:21:36.339 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 21:21:36.438 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 21:21:36.438 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 21:21:36.438 [INFO ] - - Final time T = 0.001
+[stdout] 2026-07-29 21:21:36.438 [INFO ] - - Time step dt = 0.0005
+[stdout] 2026-07-29 21:21:36.438 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 21:21:36.438 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 21:21:36.438 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 21:21:36.439 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 21:21:36.439 [INFO ] - ==================================================
+[stdout] 2026-07-29 21:21:36.439 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 21:21:36.439 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 21:21:36.439 [INFO ] - ==================================================
+[stdout] 2026-07-29 21:21:36.439 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 21:21:36.439 [INFO ] - - Total time steps: 2
+[stdout] 2026-07-29 21:21:38.134 [INFO ] - - Actual computation time: 1.6943 seconds
+[stdout] 2026-07-29 21:21:38.134 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 21:21:38.134 [INFO ] - ==================================================
+[stdout] 2026-07-29 21:21:38.134 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 21:21:38.441 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 21:21:38.442 [INFO ] - ==================================================
+[stdout] 2026-07-29 21:21:38.442 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 21:21:38.774 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 21:21:38.774 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 21:21:38.774 [INFO ] - ==================================================
+[stdout] 2026-07-29 21:21:38.774 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 21:21:38.774 [INFO ] - ==================================================
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/fast_quantum_validation/unitarylab_gpu/algorithm.log
+[stdout] 2026-07-29 21:21:38.776 [INFO ] - ==================================================
+[stdout] 2026-07-29 21:21:38.777 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 21:21:38.785 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 21:21:38.785 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 21:21:38.785 [INFO ] - - Final time T = 0.001
+[stdout] 2026-07-29 21:21:38.785 [INFO ] - - Time step dt = 0.0005
+[stdout] 2026-07-29 21:21:38.785 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 21:21:38.785 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 21:21:38.785 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 21:21:38.785 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 21:21:38.785 [INFO ] - ==================================================
+[stdout] 2026-07-29 21:21:38.785 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 21:21:38.786 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 21:21:38.786 [INFO ] - ==================================================
+[stdout] 2026-07-29 21:21:38.786 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 21:21:38.786 [INFO ] - - Total time steps: 2
+[stdout] 2026-07-29 21:22:05.012 [INFO ] - - Actual computation time: 26.2263 seconds
+[stdout] 2026-07-29 21:22:05.013 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 21:22:05.013 [INFO ] - ==================================================
+[stdout] 2026-07-29 21:22:05.013 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 21:22:05.324 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 21:22:05.324 [INFO ] - ==================================================
+[stdout] 2026-07-29 21:22:05.324 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 21:22:05.633 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 21:22:05.633 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 21:22:05.633 [INFO ] - ==================================================
+[stdout] 2026-07-29 21:22:05.633 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 21:22:05.633 [INFO ] - ==================================================
+[stdout] {
+[stdout]   "status": "success",
+[stdout]   "audit_passed": true,
+[stdout]   "artifacts": {
+[stdout]     "input": "results/fast_quantum_validation/input.json",
+[stdout]     "result": "results/fast_quantum_validation/result.json",
+[stdout]     "audit": "results/fast_quantum_validation/audit.json",
+[stdout]     "report": "results/fast_quantum_validation/report.md",
+[stdout]     "run_log": "results/fast_quantum_validation/run.log",
+[stdout]     "figure": "results/fast_quantum_validation/temperature_comparison.png",
+[stdout]     "error_decomposition_figure": "results/fast_quantum_validation/error_decomposition.png"
+[stdout]   }
+[stdout] }
+stdout_end
+stderr_begin
+stderr_end
+exit_code=0
+elapsed_ms=36143
+generated_files_begin
+generated_files_end
+finished=2026-07-29T21:22:08+08:00

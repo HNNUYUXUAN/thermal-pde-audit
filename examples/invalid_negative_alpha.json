@@ -1,0 +1,13 @@
+{
+  "task": "heat_equation_1d",
+  "length_m": 0.01,
+  "thermal_diffusivity_m2_s": -1.2e-5,
+  "initial_amplitude_k": 100.0,
+  "duration_s": 0.5,
+  "spatial_points": 32,
+  "time_steps": 200,
+  "boundary": "dirichlet_zero",
+  "initial_condition": "sine_mode_1",
+  "device": "gpu",
+  "seed": 42
+}

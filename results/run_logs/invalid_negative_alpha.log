@@ -1,0 +1,30 @@
+case=invalid_negative_alpha
+started=2026-07-29T14:13:32+08:00
+cwd=/workspace/thermal-pde-audit
+command=python3 -m thermal_pde_audit.cli run --input examples/invalid_negative_alpha.json --output results/invalid_negative_alpha --device gpu 
+sdk_env=/usr/local/birensupa/sdk/1.11.0.0.rc2/scripts/brsw_set_env.sh
+sdk_env_loaded=true
+stdout_begin
+[stdout] {
+[stdout]   "status": "rejected",
+[stdout]   "error": {
+[stdout]     "code": "INVALID_EXPERIMENT_SPEC",
+[stdout]     "message": "Experiment specification validation failed.",
+[stdout]     "issues": [
+[stdout]       {
+[stdout]         "field": "thermal_diffusivity_m2_s",
+[stdout]         "code": "OUT_OF_RANGE",
+[stdout]         "message": "Field 'thermal_diffusivity_m2_s' must be within [1e-12, 1].",
+[stdout]         "value": -1.2e-05
+[stdout]       }
+[stdout]     ]
+[stdout]   }
+[stdout] }
+stdout_end
+stderr_begin
+stderr_end
+exit_code=2
+elapsed_ms=216
+generated_files_begin
+generated_files_end
+finished=2026-07-29T14:13:32+08:00

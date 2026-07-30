@@ -1,0 +1,333 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "finite_nonempty_field",
+      "target": "classical",
+      "passed": true,
+      "value": {
+        "size": 34,
+        "all_finite": true
+      },
+      "threshold": {
+        "min_size": 1,
+        "all_finite": true
+      },
+      "explanation": "The result must not be empty and must contain no NaN or Inf."
+    },
+    {
+      "name": "boundary_residual",
+      "target": "classical",
+      "passed": true,
+      "value": 0.0,
+      "threshold": 1e-08,
+      "explanation": "Residual uses the two boundary nodes returned by the solver."
+    },
+    {
+      "name": "maximum_principle_range",
+      "target": "classical",
+      "passed": true,
+      "value": {
+        "min_k": 0.0,
+        "max_k": 98.90638115602745
+      },
+      "threshold": {
+        "min_k": -0.001,
+        "max_k": 100.001
+      },
+      "explanation": "Positive diffusion with zero boundaries must not create a new extremum."
+    },
+    {
+      "name": "positive_diffusivity_decay",
+      "target": "classical",
+      "passed": true,
+      "value": 98.90638115602745,
+      "threshold": 100.000001,
+      "explanation": "The final field amplitude must not exceed the initial amplitude."
+    },
+    {
+      "name": "max_abs_error",
+      "target": "classical",
+      "passed": true,
+      "value": 0.0006408140299640763,
+      "threshold": 15.0,
+      "explanation": "Maximum pointwise error against the analytic solution."
+    },
+    {
+      "name": "rmse",
+      "target": "classical",
+      "passed": true,
+      "value": 0.00044691683276772284,
+      "threshold": 15.0,
+      "explanation": "Root-mean-square error against the analytic solution."
+    },
+    {
+      "name": "relative_l2_error",
+      "target": "classical",
+      "passed": true,
+      "value": 6.4790377963601114e-06,
+      "threshold": 0.2,
+      "explanation": "Relative L2 error against the analytic solution."
+    },
+    {
+      "name": "finite_difference_stability",
+      "target": "classical",
+      "passed": true,
+      "value": 0.02178,
+      "threshold": 0.5,
+      "explanation": "Explicit finite difference requires r <= 0.5."
+    },
+    {
+      "name": "finite_nonempty_field",
+      "target": "quantum",
+      "passed": true,
+      "value": {
+        "size": 32,
+        "all_finite": true
+      },
+      "threshold": {
+        "min_size": 1,
+        "all_finite": true
+      },
+      "explanation": "The result must not be empty and must contain no NaN or Inf."
+    },
+    {
+      "name": "boundary_residual",
+      "target": "quantum",
+      "passed": true,
+      "value": 0.0,
+      "threshold": 1e-08,
+      "explanation": "UnitaryLab returned interior nodes only. This residual is for the zero Dirichlet values applied by the controlled protocol, not an independent boundary value emitted by UnitaryLab."
+    },
+    {
+      "name": "maximum_principle_range",
+      "target": "quantum",
+      "passed": true,
+      "value": {
+        "min_k": 9.542971849441528,
+        "max_k": 99.04929995536804
+      },
+      "threshold": {
+        "min_k": -0.001,
+        "max_k": 100.001
+      },
+      "explanation": "Positive diffusion with zero boundaries must not create a new extremum."
+    },
+    {
+      "name": "positive_diffusivity_decay",
+      "target": "quantum",
+      "passed": true,
+      "value": 99.04929995536804,
+      "threshold": 100.000001,
+      "explanation": "The final field amplitude must not exceed the initial amplitude."
+    },
+    {
+      "name": "max_abs_error",
+      "target": "quantum",
+      "passed": true,
+      "value": 0.1486825139289749,
+      "threshold": 15.0,
+      "explanation": "Maximum pointwise error against the analytic solution."
+    },
+    {
+      "name": "rmse",
+      "target": "quantum",
+      "passed": true,
+      "value": 0.11311746913073097,
+      "threshold": 15.0,
+      "explanation": "Root-mean-square error against the analytic solution."
+    },
+    {
+      "name": "relative_l2_error",
+      "target": "quantum",
+      "passed": true,
+      "value": 0.0015909224543033894,
+      "threshold": 0.2,
+      "explanation": "Relative L2 error against the analytic solution."
+    }
+  ],
+  "layers": {
+    "classical": {
+      "passed": true,
+      "thresholds": {
+        "boundary_residual_k": 1e-08,
+        "max_range_relative": 1e-05,
+        "decay_relative": 1e-08,
+        "max_abs_error_k": 15.0,
+        "relative_l2_error": 0.2,
+        "cpu_gpu_max_diff_relative": 1e-05,
+        "finite_difference_r": 0.5
+      },
+      "metrics": {
+        "max_abs_error": 0.0006408140299640763,
+        "rmse": 0.00044691683276772284,
+        "relative_l2_error": 6.4790377963601114e-06
+      },
+      "checks": [
+        {
+          "name": "finite_nonempty_field",
+          "target": "classical",
+          "passed": true,
+          "value": {
+            "size": 34,
+            "all_finite": true
+          },
+          "threshold": {
+            "min_size": 1,
+            "all_finite": true
+          },
+          "explanation": "The result must not be empty and must contain no NaN or Inf."
+        },
+        {
+          "name": "boundary_residual",
+          "target": "classical",
+          "passed": true,
+          "value": 0.0,
+          "threshold": 1e-08,
+          "explanation": "Residual uses the two boundary nodes returned by the solver."
+        },
+        {
+          "name": "maximum_principle_range",
+          "target": "classical",
+          "passed": true,
+          "value": {
+            "min_k": 0.0,
+            "max_k": 98.90638115602745
+          },
+          "threshold": {
+            "min_k": -0.001,
+            "max_k": 100.001
+          },
+          "explanation": "Positive diffusion with zero boundaries must not create a new extremum."
+        },
+        {
+          "name": "positive_diffusivity_decay",
+          "target": "classical",
+          "passed": true,
+          "value": 98.90638115602745,
+          "threshold": 100.000001,
+          "explanation": "The final field amplitude must not exceed the initial amplitude."
+        },
+        {
+          "name": "max_abs_error",
+          "target": "classical",
+          "passed": true,
+          "value": 0.0006408140299640763,
+          "threshold": 15.0,
+          "explanation": "Maximum pointwise error against the analytic solution."
+        },
+        {
+          "name": "rmse",
+          "target": "classical",
+          "passed": true,
+          "value": 0.00044691683276772284,
+          "threshold": 15.0,
+          "explanation": "Root-mean-square error against the analytic solution."
+        },
+        {
+          "name": "relative_l2_error",
+          "target": "classical",
+          "passed": true,
+          "value": 6.4790377963601114e-06,
+          "threshold": 0.2,
+          "explanation": "Relative L2 error against the analytic solution."
+        },
+        {
+          "name": "finite_difference_stability",
+          "target": "classical",
+          "passed": true,
+          "value": 0.02178,
+          "threshold": 0.5,
+          "explanation": "Explicit finite difference requires r <= 0.5."
+        }
+      ]
+    },
+    "quantum": {
+      "passed": true,
+      "thresholds": {
+        "boundary_residual_k": 1e-08,
+        "max_range_relative": 1e-05,
+        "decay_relative": 1e-08,
+        "max_abs_error_k": 15.0,
+        "relative_l2_error": 0.2,
+        "cpu_gpu_max_diff_relative": 1e-05,
+        "finite_difference_r": 0.5
+      },
+      "metrics": {
+        "max_abs_error": 0.1486825139289749,
+        "rmse": 0.11311746913073097,
+        "relative_l2_error": 0.0015909224543033894
+      },
+      "checks": [
+        {
+          "name": "finite_nonempty_field",
+          "target": "quantum",
+          "passed": true,
+          "value": {
+            "size": 32,
+            "all_finite": true
+          },
+          "threshold": {
+            "min_size": 1,
+            "all_finite": true
+          },
+          "explanation": "The result must not be empty and must contain no NaN or Inf."
+        },
+        {
+          "name": "boundary_residual",
+          "target": "quantum",
+          "passed": true,
+          "value": 0.0,
+          "threshold": 1e-08,
+          "explanation": "UnitaryLab returned interior nodes only. This residual is for the zero Dirichlet values applied by the controlled protocol, not an independent boundary value emitted by UnitaryLab."
+        },
+        {
+          "name": "maximum_principle_range",
+          "target": "quantum",
+          "passed": true,
+          "value": {
+            "min_k": 9.542971849441528,
+            "max_k": 99.04929995536804
+          },
+          "threshold": {
+            "min_k": -0.001,
+            "max_k": 100.001
+          },
+          "explanation": "Positive diffusion with zero boundaries must not create a new extremum."
+        },
+        {
+          "name": "positive_diffusivity_decay",
+          "target": "quantum",
+          "passed": true,
+          "value": 99.04929995536804,
+          "threshold": 100.000001,
+          "explanation": "The final field amplitude must not exceed the initial amplitude."
+        },
+        {
+          "name": "max_abs_error",
+          "target": "quantum",
+          "passed": true,
+          "value": 0.1486825139289749,
+          "threshold": 15.0,
+          "explanation": "Maximum pointwise error against the analytic solution."
+        },
+        {
+          "name": "rmse",
+          "target": "quantum",
+          "passed": true,
+          "value": 0.11311746913073097,
+          "threshold": 15.0,
+          "explanation": "Root-mean-square error against the analytic solution."
+        },
+        {
+          "name": "relative_l2_error",
+          "target": "quantum",
+          "passed": true,
+          "value": 0.0015909224543033894,
+          "threshold": 0.2,
+          "explanation": "Relative L2 error against the analytic solution."
+        }
+      ]
+    }
+  }
+}

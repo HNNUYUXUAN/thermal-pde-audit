@@ -1,0 +1,152 @@
+/*
+ * Project-owned minimal SUPA error reduction for thermal-pde-audit.
+ *
+ * Runtime API usage was derived from the preinstalled competition examples:
+ *   /workspace/quantum/examples/supa/quantum_reference.su
+ *   $BIREN_SDK_ROOT/supa/examples/Simple/G-Mode/VectorAdd/vectorAdd.su
+ *
+ * One 256-thread device block computes per-point contributions and reduces
+ * them through shared memory. The controlled thermal field has at most 256
+ * values, so a second block/global reduction is intentionally out of scope.
+ */
+
+#include <cmath>
+#include <cstdlib>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+#include <supa.h>
+#include <vector>
+
+template <typename T>
+void check_supa(T result, const char *func, const char *file, int line) {
+    if (result) {
+        std::cerr << "SUPA error at " << file << ":" << line << " "
+                  << func << " " << suGetErrorName(result) << std::endl;
+        std::exit(EXIT_FAILURE);
+    }
+}
+
+#define CHECK_SUPA(value) check_supa((value), #value, __FILE__, __LINE__)
+
+constexpr int kReductionThreads = 256;
+
+__global__ void thermal_error_reduction_kernel(
+    const float *actual,
+    const float *reference,
+    int count,
+    float *output) {
+    if (block_idx.x != 0) {
+        return;
+    }
+
+    __shared__ float max_errors[kReductionThreads];
+    __shared__ float squared_errors[kReductionThreads];
+    __shared__ float squared_references[kReductionThreads];
+    const int index = thread_idx.x;
+    float delta = 0.0f;
+    float reference_value = 0.0f;
+    if (index < count) {
+        reference_value = reference[index];
+        delta = actual[index] - reference_value;
+    }
+    max_errors[index] = fabsf(delta);
+    squared_errors[index] = delta * delta;
+    squared_references[index] = reference_value * reference_value;
+    __syncthreads();
+
+    for (int stride = kReductionThreads / 2; stride > 0; stride >>= 1) {
+        if (index < stride) {
+            const float candidate = max_errors[index + stride];
+            if (candidate > max_errors[index]) {
+                max_errors[index] = candidate;
+            }
+            squared_errors[index] += squared_errors[index + stride];
+            squared_references[index] += squared_references[index + stride];
+        }
+        __syncthreads();
+    }
+    if (index == 0) {
+        output[0] = max_errors[0];
+        output[1] = squared_errors[0];
+        output[2] = squared_references[0];
+    }
+}
+
+int main(int argc, char **argv) {
+    if (argc != 2) {
+        std::cerr << "usage: supa_error_reduction.out INPUT_PAIRS.txt"
+                  << std::endl;
+        return 2;
+    }
+
+    std::ifstream input(argv[1]);
+    int count = 0;
+    if (!(input >> count) || count <= 0 || count > 256) {
+        std::cerr << "input count must be within [1, 256]" << std::endl;
+        return 2;
+    }
+
+    std::vector<float> actual(count);
+    std::vector<float> reference(count);
+    for (int index = 0; index < count; ++index) {
+        if (!(input >> actual[index] >> reference[index])) {
+            std::cerr << "input ended before all value pairs were read"
+                      << std::endl;
+            return 2;
+        }
+    }
+
+    float *device_actual = nullptr;
+    float *device_reference = nullptr;
+    float *device_output = nullptr;
+    const size_t field_bytes = static_cast<size_t>(count) * sizeof(float);
+    const size_t output_bytes = 3 * sizeof(float);
+
+    CHECK_SUPA(suMallocDevice(
+        reinterpret_cast<void **>(&device_actual), field_bytes));
+    CHECK_SUPA(suMallocDevice(
+        reinterpret_cast<void **>(&device_reference), field_bytes));
+    CHECK_SUPA(suMallocDevice(
+        reinterpret_cast<void **>(&device_output), output_bytes));
+    CHECK_SUPA(suMemcpy(device_actual, actual.data(), field_bytes));
+    CHECK_SUPA(suMemcpy(device_reference, reference.data(), field_bytes));
+
+    suLaunchKernel(
+        thermal_error_reduction_kernel,
+        1,
+        kReductionThreads,
+        0,
+        nullptr,
+        device_actual,
+        device_reference,
+        count,
+        device_output);
+    CHECK_SUPA(suGetLastError());
+    CHECK_SUPA(suDeviceSynchronize());
+
+    float output[3] = {0.0f, 0.0f, 0.0f};
+    CHECK_SUPA(suMemcpy(output, device_output, output_bytes));
+    CHECK_SUPA(suFree(device_actual));
+    CHECK_SUPA(suFree(device_reference));
+    CHECK_SUPA(suFree(device_output));
+
+    const float rmse = sqrtf(output[1] / static_cast<float>(count));
+    const float relative_l2 =
+        output[2] > 0.0f ? sqrtf(output[1] / output[2]) : 0.0f;
+    std::cout << std::setprecision(12);
+    std::cout << "{\n";
+    std::cout << "  \"backend\": \"custom_supa_reduction_kernel\",\n";
+    std::cout << "  \"device\": \"supa:0\",\n";
+    std::cout << "  \"dtype\": \"float32\",\n";
+    std::cout << "  \"kernel_mode\": \"single_block_tree_reduction\",\n";
+    std::cout << "  \"launched_threads\": " << kReductionThreads << ",\n";
+    std::cout << "  \"count\": " << count << ",\n";
+    std::cout << "  \"max_abs_error\": " << output[0] << ",\n";
+    std::cout << "  \"squared_error_sum\": " << output[1] << ",\n";
+    std::cout << "  \"squared_reference_sum\": " << output[2] << ",\n";
+    std::cout << "  \"rmse\": " << rmse << ",\n";
+    std::cout << "  \"relative_l2_error\": " << relative_l2 << "\n";
+    std::cout << "}\n";
+    return 0;
+}

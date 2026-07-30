@@ -1,0 +1,30 @@
+* text=auto
+
+.gitattributes text eol=lf
+.gitignore text eol=lf
+LICENSE text eol=lf
+.gitkeep text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.su text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.svg text eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.csv binary
+*.xlsx binary
+
+# UnitaryLab evidence SVGs are generated artifacts; keep them without noisy text diffs.
+results/**/*.svg -diff
+
+# Preserve captured runtime output verbatim.
+results/**/*.log text eol=lf whitespace=-trailing-space,-blank-at-eof

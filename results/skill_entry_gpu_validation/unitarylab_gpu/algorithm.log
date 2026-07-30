@@ -1,0 +1,30 @@
+2026-07-29 23:59:29.912 [INFO ] - ==================================================
+2026-07-29 23:59:29.912 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+2026-07-29 23:59:29.921 [INFO ] - - Diffusion coefficient a = 1
+2026-07-29 23:59:29.921 [INFO ] - - Computation domain length L = 1
+2026-07-29 23:59:29.921 [INFO ] - - Final time T = 0.001
+2026-07-29 23:59:29.921 [INFO ] - - Time step dt = 0.0005
+2026-07-29 23:59:29.921 [INFO ] - - Spatial qubits nx = 5
+2026-07-29 23:59:29.921 [INFO ] - - Ancilla qubits na = 8
+2026-07-29 23:59:29.921 [INFO ] - - Boundary condition: dirichlet
+2026-07-29 23:59:29.921 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+2026-07-29 23:59:29.921 [INFO ] - ==================================================
+2026-07-29 23:59:29.921 [INFO ] - Stage 2/5: Building quantum circuit...
+2026-07-29 23:59:29.922 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+2026-07-29 23:59:29.922 [INFO ] - ==================================================
+2026-07-29 23:59:29.922 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+2026-07-29 23:59:29.922 [INFO ] - - Total time steps: 2
+2026-07-29 23:59:57.271 [INFO ] - - Actual computation time: 27.3492 seconds
+2026-07-29 23:59:57.271 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+2026-07-29 23:59:57.272 [INFO ] - ==================================================
+2026-07-29 23:59:57.272 [INFO ] - Stage 4/5: Generating solution visualization...
+2026-07-29 23:59:57.579 [DEBUG] - Solution plot saved to: /workspace/thermal-pde-audit-skill-validation-20260729/thermal-pde-audit/results/skill_entry_gpu_validation/unitarylab_gpu/1D_Heat_Lie-Trotter_nx=5_na=8_T=0.001_dt=0.0005_solution.svg
+2026-07-29 23:59:57.579 [INFO ] - Stage 4/5: Solution visualization complete ✓
+2026-07-29 23:59:57.579 [INFO ] - ==================================================
+2026-07-29 23:59:57.579 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+2026-07-29 23:59:57.884 [DEBUG] - Quantum circuit diagrams saved to: /workspace/thermal-pde-audit-skill-validation-20260729/thermal-pde-audit/results/skill_entry_gpu_validation/unitarylab_gpu
+2026-07-29 23:59:57.884 [INFO ] - Generated 2 quantum circuit diagrams
+2026-07-29 23:59:57.884 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+2026-07-29 23:59:57.884 [INFO ] - ==================================================
+2026-07-29 23:59:57.884 [INFO ] - All stages complete, computation successful！
+2026-07-29 23:59:57.884 [INFO ] - ==================================================

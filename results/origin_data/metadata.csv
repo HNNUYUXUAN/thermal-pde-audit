@@ -1,0 +1,11 @@
+﻿key,value,unit,source_file
+result_status,success,,results/skill_entry_gpu_validation/result.json
+audit_passed,1,boolean,results/skill_entry_gpu_validation/audit.json
+task,heat_equation_1d,,results/skill_entry_gpu_validation/result.json
+thermal_diffusivity,1e-06,m2/s,results/skill_entry_gpu_validation/result.json
+length,0.01,m,results/skill_entry_gpu_validation/result.json
+duration,0.1,s,results/skill_entry_gpu_validation/result.json
+initial_amplitude,100.0,K,results/skill_entry_gpu_validation/result.json
+quantum_algorithm,unitarylab_algorithms.schrodingerization.equation_heat.algorithm.HeatEquationAlgorithm,,results/skill_entry_gpu_validation/result.json
+quantum_backend,unitarylab_gpu,,results/skill_entry_gpu_validation/result.json
+boundary_export_rule,zero values added at x=0 and x=L from controlled protocol,,results/skill_entry_gpu_validation/result.json

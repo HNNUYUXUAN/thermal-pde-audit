@@ -1,0 +1,896 @@
+{
+  "task": "empirical_quantum_working_region",
+  "status": "completed",
+  "input_template": "/workspace/thermal-pde-audit/examples/standard_heat.json",
+  "device": "cpu",
+  "fourier_numbers": [
+    0.06
+  ],
+  "spatial_points": [
+    8,
+    16,
+    32,
+    64
+  ],
+  "candidate_quantum_steps": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "ancilla_qubits": 8,
+  "auxiliary_range": 16.0,
+  "recovery_point": 1,
+  "strict_relative_l2_threshold": 0.02,
+  "confirmation_rule": "2 consecutive candidate Nt values must pass the full physics audit and strict relative-L2 threshold.",
+  "cases": [
+    {
+      "fourier_number": 0.06,
+      "spatial_points": 8,
+      "physical_duration_s": 0.5,
+      "classical_time_steps": 200,
+      "runs": [
+        {
+          "requested_nt": 1,
+          "status": "success",
+          "runtime_s": 1.162477714009583,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n8_nt1",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 1,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": true,
+          "metrics_vs_analytic": {
+            "max_abs_error": 0.37673951060732236,
+            "rmse": 0.2503877542757856,
+            "relative_l2_error": 0.006035742527864293
+          },
+          "physics_audit_passed": true,
+          "min_k": 19.095806777477264,
+          "max_k": 54.0951669216156,
+          "effective_nt": 1
+        },
+        {
+          "requested_nt": 2,
+          "status": "success",
+          "runtime_s": 1.1054588719271123,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n8_nt2",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 2,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": true,
+          "metrics_vs_analytic": {
+            "max_abs_error": 0.26010035603086124,
+            "rmse": 0.22361810499757326,
+            "relative_l2_error": 0.0053904445536408635
+          },
+          "physics_audit_passed": true,
+          "min_k": 19.08479332923889,
+          "max_k": 54.732006788253784,
+          "effective_nt": 2
+        }
+      ],
+      "first_strict_pass": 1,
+      "confirmed_quantum_steps": 2,
+      "confirmed_streak": [
+        1,
+        2
+      ]
+    },
+    {
+      "fourier_number": 0.06,
+      "spatial_points": 16,
+      "physical_duration_s": 0.5,
+      "classical_time_steps": 200,
+      "runs": [
+        {
+          "requested_nt": 1,
+          "status": "success",
+          "runtime_s": 1.2270245430991054,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n16_nt1",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 1,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": false,
+          "metrics_vs_analytic": {
+            "max_abs_error": 16.16525342217634,
+            "rmse": 11.133963632621866,
+            "relative_l2_error": 0.27617172378120913
+          },
+          "physics_audit_passed": false,
+          "min_k": 10.29203087091446,
+          "max_k": 38.91101777553558,
+          "effective_nt": 1
+        },
+        {
+          "requested_nt": 2,
+          "status": "success",
+          "runtime_s": 1.6129226088523865,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n16_nt2",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 2,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": false,
+          "metrics_vs_analytic": {
+            "max_abs_error": 2.907454869663219,
+            "rmse": 1.9808223827208338,
+            "relative_l2_error": 0.0491331883227639
+          },
+          "physics_audit_passed": true,
+          "min_k": 10.302817076444626,
+          "max_k": 52.168816328048706,
+          "effective_nt": 2
+        },
+        {
+          "requested_nt": 4,
+          "status": "success",
+          "runtime_s": 2.2786778402514756,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n16_nt4",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 4,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": true,
+          "metrics_vs_analytic": {
+            "max_abs_error": 0.5079506849403188,
+            "rmse": 0.33911255337066626,
+            "relative_l2_error": 0.008411496705973196
+          },
+          "physics_audit_passed": true,
+          "min_k": 10.23186668753624,
+          "max_k": 54.568320512771606,
+          "effective_nt": 4
+        },
+        {
+          "requested_nt": 8,
+          "status": "success",
+          "runtime_s": 3.8450239738449454,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n16_nt8",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 8,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": true,
+          "metrics_vs_analytic": {
+            "max_abs_error": 0.047253477076695916,
+            "rmse": 0.042689741327605155,
+            "relative_l2_error": 0.0010588950924606494
+          },
+          "physics_audit_passed": true,
+          "min_k": 10.210847854614258,
+          "max_k": 55.114346742630005,
+          "effective_nt": 8
+        }
+      ],
+      "first_strict_pass": 4,
+      "confirmed_quantum_steps": 8,
+      "confirmed_streak": [
+        4,
+        8
+      ]
+    },
+    {
+      "fourier_number": 0.06,
+      "spatial_points": 32,
+      "physical_duration_s": 0.5,
+      "classical_time_steps": 200,
+      "runs": [
+        {
+          "requested_nt": 1,
+          "status": "success",
+          "runtime_s": 1.5443399888463318,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n32_nt1",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 1,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": false,
+          "metrics_vs_analytic": {
+            "max_abs_error": 25.536952799862256,
+            "rmse": 16.92981305695609,
+            "relative_l2_error": 0.4262496774887893
+          },
+          "physics_audit_passed": false,
+          "min_k": -2.9792597517371178,
+          "max_k": 80.78652620315552,
+          "effective_nt": 1
+        },
+        {
+          "requested_nt": 2,
+          "status": "success",
+          "runtime_s": 2.375589455012232,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n32_nt2",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 2,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": false,
+          "metrics_vs_analytic": {
+            "max_abs_error": 133.63162118822896,
+            "rmse": 89.46577322128135,
+            "relative_l2_error": 2.252520854988862
+          },
+          "physics_audit_passed": false,
+          "min_k": -11.800964921712875,
+          "max_k": 188.88119459152222,
+          "effective_nt": 2
+        },
+        {
+          "requested_nt": 4,
+          "status": "success",
+          "runtime_s": 3.326308500021696,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n32_nt4",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 4,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": false,
+          "metrics_vs_analytic": {
+            "max_abs_error": 15.107564741069453,
+            "rmse": 10.510492916085624,
+            "relative_l2_error": 0.2646275065564843
+          },
+          "physics_audit_passed": false,
+          "min_k": 5.381563678383827,
+          "max_k": 40.142008662223816,
+          "effective_nt": 4
+        },
+        {
+          "requested_nt": 8,
+          "status": "success",
+          "runtime_s": 5.731773137114942,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n32_nt8",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 8,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": false,
+          "metrics_vs_analytic": {
+            "max_abs_error": 2.7679399785343577,
+            "rmse": 1.9163328812638056,
+            "relative_l2_error": 0.048248392929787214
+          },
+          "physics_audit_passed": true,
+          "min_k": 5.330982431769371,
+          "max_k": 52.48163342475891,
+          "effective_nt": 8
+        },
+        {
+          "requested_nt": 16,
+          "status": "success",
+          "runtime_s": 10.311399224214256,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n32_nt16",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 16,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": true,
+          "metrics_vs_analytic": {
+            "max_abs_error": 0.5482808884922434,
+            "rmse": 0.3767032448735916,
+            "relative_l2_error": 0.00948443057794866
+          },
+          "physics_audit_passed": true,
+          "min_k": 5.286580324172974,
+          "max_k": 54.701292514801025,
+          "effective_nt": 16
+        },
+        {
+          "requested_nt": 32,
+          "status": "success",
+          "runtime_s": 19.592889974825084,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n32_nt32",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 32,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": true,
+          "metrics_vs_analytic": {
+            "max_abs_error": 0.07038276761211648,
+            "rmse": 0.04664279592787268,
+            "relative_l2_error": 0.0011743470914028953
+          },
+          "physics_audit_passed": true,
+          "min_k": 5.271182954311371,
+          "max_k": 55.17919063568115,
+          "effective_nt": 32
+        }
+      ],
+      "first_strict_pass": 16,
+      "confirmed_quantum_steps": 32,
+      "confirmed_streak": [
+        16,
+        32
+      ]
+    },
+    {
+      "fourier_number": 0.06,
+      "spatial_points": 64,
+      "physical_duration_s": 0.5,
+      "classical_time_steps": 507,
+      "runs": [
+        {
+          "requested_nt": 1,
+          "status": "success",
+          "runtime_s": 2.6227514990605414,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n64_nt1",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 1,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": false,
+          "metrics_vs_analytic": {
+            "max_abs_error": 44.15849681558342,
+            "rmse": 31.4488337606562,
+            "relative_l2_error": 0.7978692637956339
+          },
+          "physics_audit_passed": false,
+          "min_k": -0.029330438701435924,
+          "max_k": 99.45456981658936,
+          "effective_nt": 1
+        },
+        {
+          "requested_nt": 2,
+          "status": "success",
+          "runtime_s": 3.3833832992240787,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n64_nt2",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 2,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": false,
+          "metrics_vs_analytic": {
+            "max_abs_error": 27.712064818246006,
+            "rmse": 16.692915235722054,
+            "relative_l2_error": 0.4235058155444481
+          },
+          "physics_audit_passed": false,
+          "min_k": -25.03974437713623,
+          "max_k": 78.36198806762695,
+          "effective_nt": 2
+        },
+        {
+          "requested_nt": 4,
+          "status": "success",
+          "runtime_s": 5.1707347529008985,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n64_nt4",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 4,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": false,
+          "metrics_vs_analytic": {
+            "max_abs_error": 29.621728617570113,
+            "rmse": 20.453711216048976,
+            "relative_l2_error": 0.518918686589063
+          },
+          "physics_audit_passed": false,
+          "min_k": -0.9492533281445503,
+          "max_k": 84.91780161857605,
+          "effective_nt": 4
+        },
+        {
+          "requested_nt": 8,
+          "status": "success",
+          "runtime_s": 8.893919771071523,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n64_nt8",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 8,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": false,
+          "metrics_vs_analytic": {
+            "max_abs_error": 137.79572482766838,
+            "rmse": 94.58995328981419,
+            "relative_l2_error": 2.39978426443985
+          },
+          "physics_audit_passed": false,
+          "min_k": -7.238867878913879,
+          "max_k": 193.09179782867432,
+          "effective_nt": 8
+        },
+        {
+          "requested_nt": 16,
+          "status": "success",
+          "runtime_s": 16.153378490824252,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n64_nt16",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 16,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": false,
+          "metrics_vs_analytic": {
+            "max_abs_error": 14.620796483137894,
+            "rmse": 10.196243904838191,
+            "relative_l2_error": 0.25868271236218393
+          },
+          "physics_audit_passed": false,
+          "min_k": 2.6849450543522835,
+          "max_k": 40.67527651786804,
+          "effective_nt": 16
+        },
+        {
+          "requested_nt": 32,
+          "status": "success",
+          "runtime_s": 30.49891216866672,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n64_nt32",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 32,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": false,
+          "metrics_vs_analytic": {
+            "max_abs_error": 2.7662432604816445,
+            "rmse": 1.90769594292915,
+            "relative_l2_error": 0.04839899530503414
+          },
+          "physics_audit_passed": true,
+          "min_k": 2.6849456131458282,
+          "max_k": 52.52982974052429,
+          "effective_nt": 32
+        },
+        {
+          "requested_nt": 64,
+          "status": "success",
+          "runtime_s": 59.52497726306319,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n64_nt64",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 64,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": true,
+          "metrics_vs_analytic": {
+            "max_abs_error": 0.6955588627693956,
+            "rmse": 0.4807594406403581,
+            "relative_l2_error": 0.012197055823621728
+          },
+          "physics_audit_passed": true,
+          "min_k": 2.6680340990424156,
+          "max_k": 54.60187792778015,
+          "effective_nt": 64
+        },
+        {
+          "requested_nt": 128,
+          "status": "success",
+          "runtime_s": 117.31962949223816,
+          "artifact_directory": "results/benchmarks/working_region_grid/raw/fo0.06_n64_nt128",
+          "route": [
+            {
+              "device": "cpu",
+              "device_was_injected": true,
+              "Nt": 128,
+              "na": 8,
+              "R": 16,
+              "order": 2,
+              "point": 1
+            }
+          ],
+          "route_compatibility": {
+            "strategy": "scoped_process_lock_and_call_recording",
+            "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+            "lock_scope": "current Python process",
+            "injection_count": 1,
+            "forwarded_count": 0,
+            "restored": true
+          },
+          "log_handler_cleanup": {
+            "observed": 3,
+            "closed": 3,
+            "errors": []
+          },
+          "strict_accuracy_passed": true,
+          "metrics_vs_analytic": {
+            "max_abs_error": 0.23936875351646592,
+            "rmse": 0.1663597475435163,
+            "relative_l2_error": 0.0042206121316914385
+          },
+          "physics_audit_passed": true,
+          "min_k": 2.667987160384655,
+          "max_k": 55.05722165107727,
+          "effective_nt": 128
+        }
+      ],
+      "first_strict_pass": 64,
+      "confirmed_quantum_steps": 128,
+      "confirmed_streak": [
+        64,
+        128
+      ]
+    }
+  ],
+  "resolved_cases": 4,
+  "unresolved_cases": [],
+  "elapsed_s": 300.66570093110204,
+  "limitations": [
+    "This is an empirical map for the installed versions and controlled sine/Dirichlet problem, not a convergence theorem.",
+    "Candidate Nt values are discrete powers of two and a non-monotonic failure can occur between passing values.",
+    "Raw UnitaryLab plots and logs are retained remotely under the reported raw directories."
+  ]
+}

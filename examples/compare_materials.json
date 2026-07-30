@@ -1,0 +1,24 @@
+{
+  "task": "compare_thermal_diffusivities",
+  "shared": {
+    "length_m": 0.01,
+    "initial_amplitude_k": 100.0,
+    "duration_s": 0.1,
+    "spatial_points": 32,
+    "time_steps": 50,
+    "boundary": "dirichlet_zero",
+    "initial_condition": "sine_mode_1",
+    "device": "gpu",
+    "seed": 42
+  },
+  "cases": [
+    {
+      "label": "lower_diffusivity",
+      "thermal_diffusivity_m2_s": 5e-7
+    },
+    {
+      "label": "higher_diffusivity",
+      "thermal_diffusivity_m2_s": 1e-6
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+case=final_minimal_framework_validation_v1
+started=2026-07-29T21:22:53+08:00
+cwd=/workspace/thermal-pde-audit
+command=bash scripts/run_validation.sh 
+sdk_env=/usr/local/birensupa/sdk/1.11.0.0.rc2/scripts/brsw_set_env.sh
+sdk_env_loaded=true
+stdout_begin
+[stdout] pytest_not_installed=true
+[stdout] fallback=python3 scripts/run_cpu_checks.py
+[stdout] {
+[stdout]   "task": "framework_free_cpu_validation",
+[stdout]   "checks": [
+[stdout]     {
+[stdout]       "name": "natural_language_si_and_device",
+[stdout]       "passed": true
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "natural_language_clarification_without_execution",
+[stdout]       "passed": true
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "standard_exact_quantum_profile",
+[stdout]       "passed": true
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "quantum_profile_evidence_consistency",
+[stdout]       "passed": true
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "unverified_quantum_profile_rejected",
+[stdout]       "passed": true
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "saved_fast_gpu_supa_bundle",
+[stdout]       "passed": true
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "saved_natural_language_gpu_closed_loop",
+[stdout]       "passed": true
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "origin_plot_data_manifest_and_hashes",
+[stdout]       "passed": true
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "saved_interaction_records",
+[stdout]       "passed": true
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "classical_physics_audit",
+[stdout]       "passed": true
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "unstable_finite_difference_rejected",
+[stdout]       "passed": true
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "negative_diffusivity_rejected",
+[stdout]       "passed": true
+[stdout]     }
+[stdout]   ],
+[stdout]   "passed": true
+[stdout] }
+stdout_end
+stderr_begin
+stderr_end
+exit_code=0
+elapsed_ms=204
+generated_files_begin
+generated_files_end
+finished=2026-07-29T21:22:54+08:00

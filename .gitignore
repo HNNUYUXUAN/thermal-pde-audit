@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+release_candidates/
+.venv/
+venv/
+.env
+
+# Read-only reference corpus; keep the project repository self-contained.
+public_quantum_skills/
+
+# Generated remote/runtime artifacts that should not be committed by default.
+results/**/raw/
+results/benchmarks/final_demo_snapshot/
+results/fast_quantum_validation_v2_snapshot/
+results/remote_snapshots/
+*.o
+*.out
+*.inspect.ndjson

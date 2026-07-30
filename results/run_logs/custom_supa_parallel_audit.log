@@ -1,0 +1,83 @@
+case=custom_supa_parallel_audit
+started=2026-07-29T18:48:02+08:00
+cwd=/workspace/thermal-pde-audit
+command=env PYTHONPATH=src python3 scripts/run_custom_supa_audit.py --result results/fast_quantum_validation/result.json --output results/fast_quantum_validation/custom_supa_parallel_audit.json 
+sdk_env=/usr/local/birensupa/sdk/1.11.0.0.rc2/scripts/brsw_set_env.sh
+sdk_env_loaded=true
+stdout_begin
+[stdout] {
+[stdout]   "backend": "custom_supa_reduction_kernel",
+[stdout]   "device": "supa:0",
+[stdout]   "dtype": "float32",
+[stdout]   "status": "success",
+[stdout]   "kernel_source": "scripts/supa_error_reduction.su",
+[stdout]   "executable": "/workspace/thermal-pde-audit/build/custom_supa/supa_error_reduction.out",
+[stdout]   "metrics": {
+[stdout]     "max_abs_error": 0.00982666015625,
+[stdout]     "rmse": 0.00713051250204,
+[stdout]     "relative_l2_error": 0.000100285949884
+[stdout]   },
+[stdout]   "cpu_float32_metrics": {
+[stdout]     "max_abs_error": 0.00982666015625,
+[stdout]     "rmse": 0.007130512601897345,
+[stdout]     "relative_l2_error": 0.00010028594746605305
+[stdout]   },
+[stdout]   "cpu_source_float64_metrics": {
+[stdout]     "max_abs_error": 0.009826979494448551,
+[stdout]     "rmse": 0.007130176547467133,
+[stdout]     "relative_l2_error": 0.00010028122145663477
+[stdout]   },
+[stdout]   "consistency": {
+[stdout]     "passed": true,
+[stdout]     "kernel_vs_float32_cpu": {
+[stdout]       "passed": true,
+[stdout]       "absolute_differences": {
+[stdout]         "max_abs_error": 0.0,
+[stdout]         "rmse": 9.985734461537277e-11,
+[stdout]         "relative_l2_error": 2.417946946180541e-12
+[stdout]       },
+[stdout]       "threshold": 1e-06
+[stdout]     },
+[stdout]     "end_to_end_vs_source_float64_cpu": {
+[stdout]       "passed": true,
+[stdout]       "absolute_differences": {
+[stdout]         "max_abs_error": 3.1933819855112233e-07,
+[stdout]         "rmse": 3.359545728675445e-07,
+[stdout]         "relative_l2_error": 4.728427365228776e-09
+[stdout]       },
+[stdout]       "threshold": 1e-05
+[stdout]     }
+[stdout]   },
+[stdout]   "runtime_s": {
+[stdout]     "subprocess_total": 0.023266450967639685
+[stdout]   },
+[stdout]   "warnings": [
+[stdout]     "The custom kernel uses one 256-thread SUPA block and shared-memory tree reduction for fields of at most 256 values. It does not implement a multi-block/global reduction.",
+[stdout]     "The kernel accumulates in float32. Independent float32 and source-float64 checks use separate tolerances."
+[stdout]   ],
+[stdout]   "process": {
+[stdout]     "exit_code": 0,
+[stdout]     "stderr": ""
+[stdout]   },
+[stdout]   "raw_kernel_result": {
+[stdout]     "backend": "custom_supa_reduction_kernel",
+[stdout]     "device": "supa:0",
+[stdout]     "dtype": "float32",
+[stdout]     "kernel_mode": "single_block_tree_reduction",
+[stdout]     "launched_threads": 256,
+[stdout]     "count": 32,
+[stdout]     "max_abs_error": 0.00982666015625,
+[stdout]     "squared_error_sum": 0.00162701471709,
+[stdout]     "squared_reference_sum": 161774.96875,
+[stdout]     "rmse": 0.00713051250204,
+[stdout]     "relative_l2_error": 0.000100285949884
+[stdout]   }
+[stdout] }
+stdout_end
+stderr_begin
+stderr_end
+exit_code=0
+elapsed_ms=212
+generated_files_begin
+generated_files_end
+finished=2026-07-29T18:48:02+08:00

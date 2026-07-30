@@ -1,0 +1,87 @@
+case=natural_language_gpu_validation_v2_plan
+started=2026-07-29T20:43:06+08:00
+cwd=/workspace/thermal-pde-audit
+command=bash scripts/run_text_demo.sh 
+sdk_env=/usr/local/birensupa/sdk/1.11.0.0.rc2/scripts/brsw_set_env.sh
+sdk_env_loaded=true
+stdout_begin
+[stdout] custom_supa_kernel=/workspace/thermal-pde-audit/build/custom_supa/supa_error_reduction.out
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/natural_language_gpu_validation/unitarylab_cpu/algorithm.log
+[stdout] 2026-07-29 20:43:10.227 [INFO ] - ==================================================
+[stdout] 2026-07-29 20:43:10.227 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 20:43:10.324 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 20:43:10.324 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 20:43:10.324 [INFO ] - - Final time T = 0.001
+[stdout] 2026-07-29 20:43:10.324 [INFO ] - - Time step dt = 0.0005
+[stdout] 2026-07-29 20:43:10.324 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 20:43:10.324 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 20:43:10.324 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 20:43:10.324 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 20:43:10.324 [INFO ] - ==================================================
+[stdout] 2026-07-29 20:43:10.325 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 20:43:10.325 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 20:43:10.325 [INFO ] - ==================================================
+[stdout] 2026-07-29 20:43:10.325 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 20:43:10.325 [INFO ] - - Total time steps: 2
+[stdout] 2026-07-29 20:43:11.995 [INFO ] - - Actual computation time: 1.6697 seconds
+[stdout] 2026-07-29 20:43:11.995 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 20:43:11.995 [INFO ] - ==================================================
+[stdout] 2026-07-29 20:43:11.996 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 20:43:12.303 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 20:43:12.303 [INFO ] - ==================================================
+[stdout] 2026-07-29 20:43:12.303 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 20:43:12.636 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 20:43:12.636 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 20:43:12.636 [INFO ] - ==================================================
+[stdout] 2026-07-29 20:43:12.636 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 20:43:12.636 [INFO ] - ==================================================
+[stdout] [AlgoLogger] 创建日志文件: /workspace/thermal-pde-audit/results/natural_language_gpu_validation/unitarylab_gpu/algorithm.log
+[stdout] 2026-07-29 20:43:12.639 [INFO ] - ==================================================
+[stdout] 2026-07-29 20:43:12.639 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+[stdout] 2026-07-29 20:43:12.647 [INFO ] - - Diffusion coefficient a = 1
+[stdout] 2026-07-29 20:43:12.647 [INFO ] - - Computation domain length L = 1
+[stdout] 2026-07-29 20:43:12.647 [INFO ] - - Final time T = 0.001
+[stdout] 2026-07-29 20:43:12.647 [INFO ] - - Time step dt = 0.0005
+[stdout] 2026-07-29 20:43:12.647 [INFO ] - - Spatial qubits nx = 5
+[stdout] 2026-07-29 20:43:12.647 [INFO ] - - Ancilla qubits na = 8
+[stdout] 2026-07-29 20:43:12.647 [INFO ] - - Boundary condition: dirichlet
+[stdout] 2026-07-29 20:43:12.647 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+[stdout] 2026-07-29 20:43:12.647 [INFO ] - ==================================================
+[stdout] 2026-07-29 20:43:12.647 [INFO ] - Stage 2/5: Building quantum circuit...
+[stdout] 2026-07-29 20:43:12.648 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+[stdout] 2026-07-29 20:43:12.648 [INFO ] - ==================================================
+[stdout] 2026-07-29 20:43:12.648 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+[stdout] 2026-07-29 20:43:12.648 [INFO ] - - Total time steps: 2
+[stdout] 2026-07-29 20:43:38.960 [INFO ] - - Actual computation time: 26.3122 seconds
+[stdout] 2026-07-29 20:43:38.960 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+[stdout] 2026-07-29 20:43:38.961 [INFO ] - ==================================================
+[stdout] 2026-07-29 20:43:38.961 [INFO ] - Stage 4/5: Generating solution visualization...
+[stdout] 2026-07-29 20:43:39.272 [INFO ] - Stage 4/5: Solution visualization complete ✓
+[stdout] 2026-07-29 20:43:39.272 [INFO ] - ==================================================
+[stdout] 2026-07-29 20:43:39.272 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+[stdout] 2026-07-29 20:43:39.580 [INFO ] - Generated 2 quantum circuit diagrams
+[stdout] 2026-07-29 20:43:39.580 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+[stdout] 2026-07-29 20:43:39.580 [INFO ] - ==================================================
+[stdout] 2026-07-29 20:43:39.580 [INFO ] - All stages complete, computation successful！
+[stdout] 2026-07-29 20:43:39.580 [INFO ] - ==================================================
+[stdout] {
+[stdout]   "status": "success",
+[stdout]   "audit_passed": true,
+[stdout]   "artifacts": {
+[stdout]     "input": "results/natural_language_gpu_validation/input.json",
+[stdout]     "result": "results/natural_language_gpu_validation/result.json",
+[stdout]     "audit": "results/natural_language_gpu_validation/audit.json",
+[stdout]     "report": "results/natural_language_gpu_validation/report.md",
+[stdout]     "run_log": "results/natural_language_gpu_validation/run.log",
+[stdout]     "figure": "results/natural_language_gpu_validation/temperature_comparison.png",
+[stdout]     "error_decomposition_figure": "results/natural_language_gpu_validation/error_decomposition.png"
+[stdout]   }
+[stdout] }
+stdout_end
+stderr_begin
+stderr_end
+exit_code=0
+elapsed_ms=36021
+generated_files_begin
+generated_files_end
+finished=2026-07-29T20:43:42+08:00

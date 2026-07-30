@@ -1,0 +1,30 @@
+2026-07-29 19:42:24.122 [INFO ] - ==================================================
+2026-07-29 19:42:24.123 [INFO ] - Stage 1/5: Parsing heat equation parameters...
+2026-07-29 19:42:24.220 [INFO ] - - Diffusion coefficient a = 1
+2026-07-29 19:42:24.221 [INFO ] - - Computation domain length L = 1
+2026-07-29 19:42:24.221 [INFO ] - - Final time T = 0.06
+2026-07-29 19:42:24.221 [INFO ] - - Time step dt = 0.001875
+2026-07-29 19:42:24.221 [INFO ] - - Spatial qubits nx = 5
+2026-07-29 19:42:24.221 [INFO ] - - Ancilla qubits na = 8
+2026-07-29 19:42:24.221 [INFO ] - - Boundary condition: dirichlet
+2026-07-29 19:42:24.221 [INFO ] - Stage 1/5: Parameter parsing complete ✓
+2026-07-29 19:42:24.221 [INFO ] - ==================================================
+2026-07-29 19:42:24.221 [INFO ] - Stage 2/5: Building quantum circuit...
+2026-07-29 19:42:24.221 [INFO ] - Stage 2/5: Quantum circuit complete ✓
+2026-07-29 19:42:24.222 [INFO ] - ==================================================
+2026-07-29 19:42:24.222 [INFO ] - Stage 3/5: Starting quantum circuit execution...
+2026-07-29 19:42:24.222 [INFO ] - - Total time steps: 32
+2026-07-29 19:42:44.117 [INFO ] - - Actual computation time: 19.8950 seconds
+2026-07-29 19:42:44.117 [INFO ] - Stage 3/5: Quantum circuit execution complete ✓
+2026-07-29 19:42:44.117 [INFO ] - ==================================================
+2026-07-29 19:42:44.117 [INFO ] - Stage 4/5: Generating solution visualization...
+2026-07-29 19:42:44.425 [DEBUG] - Solution plot saved to: /workspace/thermal-pde-audit/results/quantum_layer_validation/unitarylab_cpu/1D_Heat_Lie-Trotter_nx=5_na=8_T=0.06_dt=0.001875_solution.svg
+2026-07-29 19:42:44.425 [INFO ] - Stage 4/5: Solution visualization complete ✓
+2026-07-29 19:42:44.425 [INFO ] - ==================================================
+2026-07-29 19:42:44.425 [INFO ] - Stage 5/5: Generating quantum circuit diagrams...
+2026-07-29 19:42:44.789 [DEBUG] - Quantum circuit diagrams saved to: /workspace/thermal-pde-audit/results/quantum_layer_validation/unitarylab_cpu
+2026-07-29 19:42:44.789 [INFO ] - Generated 2 quantum circuit diagrams
+2026-07-29 19:42:44.789 [INFO ] - Stage 5/5: Quantum circuit diagrams complete ✓
+2026-07-29 19:42:44.789 [INFO ] - ==================================================
+2026-07-29 19:42:44.789 [INFO ] - All stages complete, computation successful！
+2026-07-29 19:42:44.789 [INFO ] - ==================================================

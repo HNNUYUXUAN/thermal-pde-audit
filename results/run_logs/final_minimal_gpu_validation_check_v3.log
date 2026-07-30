@@ -1,0 +1,192 @@
+case=final_minimal_gpu_validation_check_v3
+started=2026-07-29T21:22:47+08:00
+cwd=/workspace/thermal-pde-audit
+command=bash -lc cd\ /workspace/thermal-pde-audit\;\ export\ PYTHONPATH=/workspace/thermal-pde-audit/src\;\ python3\ -m\ thermal_pde_audit.cli\ validate-result\ --result-dir\ results/fast_quantum_validation\ --require-gpu\ --require-supa\ --require-custom-supa\ --require-error-decomposition 
+sdk_env=/usr/local/birensupa/sdk/1.11.0.0.rc2/scripts/brsw_set_env.sh
+sdk_env_loaded=true
+stdout_begin
+[stdout] 
+[stdout] ███████╗ ██╗   ██╗  ██████╗ ██╗       ██████╗  ██╗   ██╗ ██████╗
+[stdout] ██╔════╝ ██║   ██║ ██╔════╝ ██║      ██╔═══██╗ ██║   ██║ ██╔══██╗
+[stdout] ███████╗ ██║   ██║ ██║      ██║      ██║   ██║ ██║   ██║ ██║  ██║
+[stdout] ╚════██║ ██║   ██║ ██║      ██║      ██║   ██║ ██║   ██║ ██║  ██║
+[stdout] ███████║ ╚██████╔╝ ╚██████╗ ███████╗ ╚██████╔╝ ╚██████╔╝ ██████╔╝
+[stdout] ╚══════╝  ╚═════╝   ╚═════╝ ╚══════╝  ╚═════╝   ╚═════╝  ╚═════╝ 
+[stdout] {
+[stdout]   "task": "validate_result_bundle",
+[stdout]   "result_dir": "results/fast_quantum_validation",
+[stdout]   "passed": true,
+[stdout]   "checks": [
+[stdout]     {
+[stdout]       "name": "required_artifacts",
+[stdout]       "passed": true,
+[stdout]       "value": {
+[stdout]         "missing": []
+[stdout]       },
+[stdout]       "expected": {
+[stdout]         "missing": []
+[stdout]       }
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "json_parse",
+[stdout]       "passed": true,
+[stdout]       "value": "success",
+[stdout]       "expected": "success"
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "result_and_audit_status",
+[stdout]       "passed": true,
+[stdout]       "value": {
+[stdout]         "result_status": "success",
+[stdout]         "audit_passed": true
+[stdout]       },
+[stdout]       "expected": {
+[stdout]         "result_status": "success",
+[stdout]         "audit_passed": true
+[stdout]       }
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "quantum_field_protocol",
+[stdout]       "passed": true,
+[stdout]       "value": {
+[stdout]         "status": "success",
+[stdout]         "field_size": 32
+[stdout]       },
+[stdout]       "expected": {
+[stdout]         "status": "success",
+[stdout]         "field_size": 32
+[stdout]       }
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "gpu_route_evidence",
+[stdout]       "passed": true,
+[stdout]       "value": {
+[stdout]         "backend": "unitarylab_gpu",
+[stdout]         "route": [
+[stdout]           {
+[stdout]             "device": "gpu",
+[stdout]             "requested_device": "gpu",
+[stdout]             "device_was_injected": true,
+[stdout]             "device_matches_requested": true,
+[stdout]             "Nt": 2,
+[stdout]             "na": 8,
+[stdout]             "R": 16,
+[stdout]             "order": 2,
+[stdout]             "point": 1
+[stdout]           }
+[stdout]         ],
+[stdout]         "compatibility": {
+[stdout]           "strategy": "scoped_process_lock_and_call_recording",
+[stdout]           "requested_device": "gpu",
+[stdout]           "lower_level_signature": "(u0, H1=None, H2=None, Nt=1, na=5, R=4, order=2, point=1, b=None, theta=None, device='cpu')",
+[stdout]           "lock_scope": "current Python process",
+[stdout]           "injection_count": 1,
+[stdout]           "forwarded_count": 0,
+[stdout]           "conflict_count": 0,
+[stdout]           "all_devices_match_requested": true,
+[stdout]           "restored": true
+[stdout]         },
+[stdout]         "restored": true
+[stdout]       },
+[stdout]       "expected": {
+[stdout]         "backend": "unitarylab_gpu",
+[stdout]         "device": "gpu",
+[stdout]         "restored": true
+[stdout]       }
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "validated_profile_evidence",
+[stdout]       "passed": true,
+[stdout]       "value": {
+[stdout]         "status": "validated_profile",
+[stdout]         "selection_mode": "exact_empirical_match"
+[stdout]       },
+[stdout]       "expected": {
+[stdout]         "status": "validated_profile",
+[stdout]         "selection_mode": "exact_empirical_match"
+[stdout]       }
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "torch_supa_evidence",
+[stdout]       "passed": true,
+[stdout]       "value": {
+[stdout]         "status": "success",
+[stdout]         "device": "supa:0",
+[stdout]         "consistency": true
+[stdout]       },
+[stdout]       "expected": {
+[stdout]         "status": "success",
+[stdout]         "device": "supa:0",
+[stdout]         "consistency": true
+[stdout]       }
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "custom_supa_evidence",
+[stdout]       "passed": true,
+[stdout]       "value": {
+[stdout]         "status": "success",
+[stdout]         "device": "supa:0",
+[stdout]         "kernel_source": "scripts/supa_error_reduction.su",
+[stdout]         "consistency": true,
+[stdout]         "kernel_mode": "single_block_tree_reduction",
+[stdout]         "launched_threads": 256
+[stdout]       },
+[stdout]       "expected": {
+[stdout]         "status": "success",
+[stdout]         "device": "supa:0",
+[stdout]         "kernel_source": "scripts/supa_error_reduction.su",
+[stdout]         "consistency": true,
+[stdout]         "kernel_mode": "single_block_tree_reduction",
+[stdout]         "launched_threads": 256
+[stdout]       }
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "schrodingerization_error_decomposition_evidence",
+[stdout]       "passed": true,
+[stdout]       "value": {
+[stdout]         "status": "success",
+[stdout]         "recovery_status": "success",
+[stdout]         "metric_keys": [
+[stdout]           "same_parameter_recovery_vs_semi_discrete",
+[stdout]           "semi_discrete_vs_continuous_analytic",
+[stdout]           "trotter_vs_continuous_analytic",
+[stdout]           "trotter_vs_same_parameter_recovery",
+[stdout]           "trotter_vs_semi_discrete"
+[stdout]         ],
+[stdout]         "figure_signature": "89504e470d0a1a0a"
+[stdout]       },
+[stdout]       "expected": {
+[stdout]         "status": "success",
+[stdout]         "recovery_status": "success",
+[stdout]         "metric_keys": [
+[stdout]           "same_parameter_recovery_vs_semi_discrete",
+[stdout]           "semi_discrete_vs_continuous_analytic",
+[stdout]           "trotter_vs_continuous_analytic",
+[stdout]           "trotter_vs_same_parameter_recovery",
+[stdout]           "trotter_vs_semi_discrete"
+[stdout]         ],
+[stdout]         "figure_signature": "89504e470d0a1a0a"
+[stdout]       }
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "png_signature",
+[stdout]       "passed": true,
+[stdout]       "value": "89504e470d0a1a0a",
+[stdout]       "expected": "89504e470d0a1a0a"
+[stdout]     },
+[stdout]     {
+[stdout]       "name": "controlled_reproduction_command",
+[stdout]       "passed": true,
+[stdout]       "value": "present",
+[stdout]       "expected": "report contains a controlled CLI or project-script command"
+[stdout]     }
+[stdout]   ]
+[stdout] }
+stdout_end
+stderr_begin
+stderr_end
+exit_code=0
+elapsed_ms=239
+generated_files_begin
+generated_files_end
+finished=2026-07-29T21:22:47+08:00

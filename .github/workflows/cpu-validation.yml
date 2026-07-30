@@ -1,0 +1,41 @@
+name: CPU validation
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install development dependencies
+        run: python -m pip install -e ".[dev]"
+      - name: Ruff
+        run: ruff check src tests scripts
+      - name: Mypy
+        run: mypy src/thermal_pde_audit
+      - name: Pytest
+        run: pytest -q
+      - name: Public Skill package
+        run: python scripts/validate_skill.py
+      - name: Public Skill smoke test
+        run: |
+          python skills/thermal-pde-audit/scripts/doctor.py
+          python skills/thermal-pde-audit/scripts/algorithm.py \
+            --text "长度10毫米，热扩散率1e-6平方米每秒，初始温升100K，计算0.1秒，使用32个空间点" \
+            > /tmp/thermal-pde-audit-skill-plan.json
+          grep '"status": "ready"' /tmp/thermal-pde-audit-skill-plan.json
+      - name: Framework-free evidence checks
+        run: python scripts/run_cpu_checks.py

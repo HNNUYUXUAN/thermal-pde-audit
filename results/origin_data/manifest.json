@@ -1,0 +1,118 @@
+{
+  "task": "origin_plot_data_export",
+  "status": "success",
+  "exported_at_utc": "2026-07-29T16:26:17.301140+00:00",
+  "source_files": [
+    {
+      "path": "results/skill_entry_gpu_validation/result.json",
+      "sha256": "21e189f430393d5058c2e1887346c4915bc37e3087103d41f67d404ee91ed4cf"
+    },
+    {
+      "path": "results/skill_entry_gpu_validation/audit.json",
+      "sha256": "1282e68bc100f440a2bfb0031b08b18876a4a7cf923049f9a52742bc2a803e88"
+    },
+    {
+      "path": "results/benchmarks/working_region_fo/working_region.json",
+      "sha256": "cf44c45388aa2da609cee33551fe94319c09a544616f1feec53b4e63d3a6fac0"
+    },
+    {
+      "path": "results/benchmarks/working_region_grid/working_region.json",
+      "sha256": "e6189a95588dfcf45a4012f9460b2e8a71b327c98eaf8d2ccbf99eebaec79081"
+    },
+    {
+      "path": "results/benchmarks/working_region_gapfill/working_region.json",
+      "sha256": "fbbc9d7d762d32b5944faeaae685e9cf7942924beedba2ddeee0ce3d4a78c420"
+    },
+    {
+      "path": "results/skill_entry_gpu_validation/run.log",
+      "sha256": "9d96c9ea697738e23e07055dde72036f42691d700d89da2e38162c760cd059a9"
+    }
+  ],
+  "tables": [
+    {
+      "path": "temperature_profile.csv",
+      "data_rows": 34,
+      "sha256": "1f9a8490987068ddfe71575b3a33867043ab42694ca0dd8ec38278f66c32ab15",
+      "encoding": "UTF-8 with BOM",
+      "delimiter": ",",
+      "decimal_separator": "."
+    },
+    {
+      "path": "error_decomposition.csv",
+      "data_rows": 5,
+      "sha256": "252e2ff803fc0254c94523aa38d4d1ceb8b809c50488a829ccfb1971f9a3498d",
+      "encoding": "UTF-8 with BOM",
+      "delimiter": ",",
+      "decimal_separator": "."
+    },
+    {
+      "path": "runtime_comparison.csv",
+      "data_rows": 5,
+      "sha256": "df84b8c2c2b92b522561c82c622d820896bcc48ab8c35939ed17c2a7591ad9dd",
+      "encoding": "UTF-8 with BOM",
+      "delimiter": ",",
+      "decimal_separator": "."
+    },
+    {
+      "path": "audit_checks.csv",
+      "data_rows": 19,
+      "sha256": "a4f47b2f7145008f13db3e17b0551f262d98edffc72ffa8a3b809a1736ea59af",
+      "encoding": "UTF-8 with BOM",
+      "delimiter": ",",
+      "decimal_separator": "."
+    },
+    {
+      "path": "working_region_confirmed.csv",
+      "data_rows": 15,
+      "sha256": "67938983b30506c7dfc833811cca7224b4d3408b9792b8599362a5c1adcf4136",
+      "encoding": "UTF-8 with BOM",
+      "delimiter": ",",
+      "decimal_separator": "."
+    },
+    {
+      "path": "working_region_runs.csv",
+      "data_rows": 72,
+      "sha256": "827cf3fdac86d8c3001f5c1ec77969661aa6ba985cc21d106c257d520c52a686",
+      "encoding": "UTF-8 with BOM",
+      "delimiter": ",",
+      "decimal_separator": "."
+    },
+    {
+      "path": "working_region_unique.csv",
+      "data_rows": 14,
+      "sha256": "69a293da22951b8a36ee9982f32389c484753bfdcc4e2e87ced9991dc5e66b88",
+      "encoding": "UTF-8 with BOM",
+      "delimiter": ",",
+      "decimal_separator": "."
+    },
+    {
+      "path": "fourier_scan_plot.csv",
+      "data_rows": 11,
+      "sha256": "33d5d1905fb30dcccc80656f91d06eefa2bff932e63966215da2b196b1a87730",
+      "encoding": "UTF-8 with BOM",
+      "delimiter": ",",
+      "decimal_separator": "."
+    },
+    {
+      "path": "grid_scan_plot.csv",
+      "data_rows": 4,
+      "sha256": "098ccbba0e96ba7ce02563a900e5f994240c6a62afc65d8a192932c084a64f15",
+      "encoding": "UTF-8 with BOM",
+      "delimiter": ",",
+      "decimal_separator": "."
+    },
+    {
+      "path": "metadata.csv",
+      "data_rows": 10,
+      "sha256": "05095da11211c3175798baeb02c5e9dca090144ff56a31acbcf810e426431410",
+      "encoding": "UTF-8 with BOM",
+      "delimiter": ",",
+      "decimal_separator": "."
+    }
+  ],
+  "notes": [
+    "Quantum fields contain interior nodes; zero boundary rows are added from the controlled Dirichlet protocol.",
+    "Runtime rows record wall-clock measurements from the Biren competition container.",
+    "Working-region rows are empirical exact configurations used for profile selection."
+  ]
+}

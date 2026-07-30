@@ -1,0 +1,67 @@
+probe_started=2026-07-29T13:47:11+08:00
+hostname=c22ad574-b0d7-42e1-9170-4254f83cedd3
+uname=Linux c22ad574-b0d7-42e1-9170-4254f83cedd3 5.15.0-119-generic #129-Ubuntu SMP Fri Aug 2 19:25:20 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.5 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+python_path=/usr/bin/python3
+Python 3.10.12
+sdk_env=/usr/local/birensupa/sdk/1.11.0.0.rc2/scripts/brsw_set_env.sh
+sdk_env_loaded=true
+python_executable=/usr/bin/python3
+python_prefix=/usr
+torch_path=/usr/local/lib/python3.10/dist-packages/torch/__init__.py
+torch_version=2.9.0
+torch_br_path=/usr/local/lib/python3.10/dist-packages/torch_br/__init__.py
+torch_br_version=1.10.0.20900+br1xx
+unitarylab_path=/usr/local/lib/python3.10/dist-packages/unitarylab/__init__.py
+unitarylab_version=1.0.0
+unitarylab_algorithms_path=/usr/local/lib/python3.10/dist-packages/unitarylab_algorithms/__init__.py
+unitarylab_algorithms_version=1.1.0
+torch_version=2.9.0+cu128
+torch_supa_device_count=1
+brsmi_begin
+Wed Jul 29 13:47:15 2026
++------------------------------------------------------------------------------+
+| BR-SMI 1.11.0          Driver Version: 1.11.0          SUPA Version: 1.11    |
++----------------------------+-----------------------+-------------------------+
+|   GPU                 Name |                Bus-Id |    Volatile Uncorr. ECC |
+|  Temp  Perf  Pwr:Usage/Cap |          Memory-Usage |    GPU-Util  Compute M. |
+|              Persistence-M |                       |                  SVI M. |
++============================+=======================+=========================+
+|     0            Biren106M |      00000000:3F:00.0 |                       0 |
+|    34    P0     62W / 400W |       0MiB / 32512MiB |          0%     Default |
+|                        Off |                       |                Disabled |
++----------------------------+-----------------------+-------------------------+
++------------------------------------------------------------------------------+
+| Processes:                                                                   |
+| GPU   SVI Dev        PID   Process Name                     GPU Memory Usage |
++==============================================================================+
+|  No running process found.                                                   |
++------------------------------------------------------------------------------+
+brsmi_end
+dev_biren_begin
+total 0
+drwxr-xr-x 2 root root     60 Jun 29 17:52 .
+drwxr-xr-x 6 root root    400 Jun 29 17:52 ..
+crw-rw-rw- 1 root root 505, 2 Jun 29 17:52 card_2
+dev_biren_end
+quantum_examples_begin
+/workspace/quantum/examples/advection_demo.py
+/workspace/quantum/examples/bell_state_demo.py
+/workspace/quantum/examples/compare_supa_unitarylab.py
+/workspace/quantum/examples/grover_demo.py
+/workspace/quantum/examples/supa/quantum_reference.su
+/workspace/quantum/examples/vqc_demo.py
+quantum_examples_end
+probe_finished=2026-07-29T13:47:15+08:00
+probe_exit_code=0

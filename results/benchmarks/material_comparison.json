@@ -1,0 +1,22 @@
+{
+  "task": "compare_thermal_diffusivities",
+  "cases": [
+    {
+      "label": "lower_diffusivity",
+      "thermal_diffusivity_m2_s": 5e-07,
+      "status": "success",
+      "wall_runtime_s": 5.910248603671789,
+      "quantum_runtime_s": 2.7236577346920967,
+      "final_peak_k": 99.48055148124695
+    },
+    {
+      "label": "higher_diffusivity",
+      "thermal_diffusivity_m2_s": 1e-06,
+      "status": "success",
+      "wall_runtime_s": 2.315725198946893,
+      "quantum_runtime_s": 2.2024568230845034,
+      "final_peak_k": 99.04929995536804
+    }
+  ],
+  "summary": "This benchmark reports measured runtimes and thermal-response metrics for two diffusivity settings under the same protocol."
+}

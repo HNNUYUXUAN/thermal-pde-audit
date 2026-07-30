@@ -1,0 +1,16 @@
+case=custom_supa_parallel_build
+started=2026-07-29T18:47:55+08:00
+cwd=/workspace/thermal-pde-audit
+command=bash scripts/build_custom_supa_kernel.sh 
+sdk_env=/usr/local/birensupa/sdk/1.11.0.0.rc2/scripts/brsw_set_env.sh
+sdk_env_loaded=true
+stdout_begin
+[stdout] custom_supa_kernel=/workspace/thermal-pde-audit/build/custom_supa/supa_error_reduction.out
+stdout_end
+stderr_begin
+stderr_end
+exit_code=0
+elapsed_ms=953
+generated_files_begin
+generated_files_end
+finished=2026-07-29T18:47:56+08:00
