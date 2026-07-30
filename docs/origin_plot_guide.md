@@ -1,8 +1,10 @@
 # Origin 绘图指南
 
-`results/origin_data/` 包含 10 张 UTF-8-BOM CSV 表，共 189 行，可直接导入
-Origin、Excel、Python 或其他科学绘图工具。当前导出以
-`results/skill_entry_gpu_validation/` 为主要结果来源。
+`results/origin_data/` 保留 10 张来源级 UTF-8-BOM CSV，并在
+`results/origin_data/origin_ready/` 提供 12 张面向复绘的 CSV，共 222 行数据，
+可直接导入 Origin、Excel、Python 或其他科学绘图工具。当前数据包以
+`results/skill_entry_gpu_validation/` 为主要结果来源，并附字段字典、来源哈希、
+数据索引和已复核工作簿。
 
 ## 推荐图表
 

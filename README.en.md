@@ -128,10 +128,11 @@ bash skills/thermal-pde-audit/scripts/run-text-demo.sh
 
 ### A traceable quantum-PDE route
 
-“Quantum” here means UnitaryLab quantum-circuit/state-vector simulation, not a claim of
-quantum-hardware execution. The project preserves circuit artifacts, device routing,
-same-parameter recovery, and layered-error evidence so that each calculation can be traced
-to its execution chain.
+“Quantum” here specifically means UnitaryLab quantum-circuit/state-vector simulation:
+Biren GPU/SUPA performs circuit and state-vector tensor computation plus error reduction,
+while the CPU handles workflow control and post-processing. The project preserves circuit
+artifacts, device routing, same-parameter recovery, and layered-error evidence so that each
+calculation can be traced to its execution chain.
 
 <p align="center">
   <img src="showcase-images/06-quantum-pde-execution-trace.png" alt="Traceable quantum PDE circuit-simulation route on Biren GPU" width="100%">
@@ -144,7 +145,7 @@ covering natural-language parsing, analytical and finite-difference baselines, U
 | Metric | Measured result |
 |---|---:|
 | Full-workflow status | `success` |
-| Full-workflow duration | about `35 s` |
+| Full-workflow duration | `36.143 s` |
 | Classical finite-difference relative L2 | `6.47904e-06` |
 | GPU quantum-simulation relative L2 | `1.0028122e-04` |
 | GPU maximum absolute error | `0.00982698 K` |
@@ -164,7 +165,7 @@ and 32 Trotter time slices, and provides:
 - 7 Agent/Skill interaction records covering standard runs, material comparison, CPU/GPU comparison,
   parameter governance, dual SUPA, and natural-language closed loops;
 - 55 automated tests and GitHub Actions;
-- 10 Origin-friendly CSV tables, 189 rows of plotting data, and one reviewed Excel workbook.
+- 12 Origin-ready CSV tables, 222 rows of plotting data, and one reviewed Excel workbook.
 
 <p align="center">
   <img src="showcase-images/07-verified-parameter-profiles.png" alt="Validated quantum parameter profiles across Fourier number, spatial resolution, and Trotter steps" width="100%">

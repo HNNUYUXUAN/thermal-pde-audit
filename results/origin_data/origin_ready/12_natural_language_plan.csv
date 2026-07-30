@@ -1,0 +1,13 @@
+﻿parameter,value,provenance
+task,heat_equation_1d,whitelisted field
+length_m,0.01,whitelisted field
+thermal_diffusivity_m2_s,0.000001,whitelisted field
+initial_amplitude_k,100,whitelisted field
+duration_s,0.1,whitelisted field
+spatial_points,32,whitelisted field
+time_steps,50,whitelisted field
+boundary,dirichlet_zero,deterministic default
+initial_condition,sine_mode_1,deterministic default
+device,gpu,whitelisted field
+seed,42,deterministic default
+source_text,模拟长度10毫米、热扩散率1e-6平方米每秒、初始温升100K的一维热传导，计算0.1秒，使用32个空间点和50个时间步，使用GPU,natural-language request

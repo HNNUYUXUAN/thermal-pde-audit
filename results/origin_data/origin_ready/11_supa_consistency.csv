@@ -1,0 +1,12 @@
+﻿backend,metric,value,unit,status
+torch_supa,max_abs_error_k,0.00982666015625,K,success
+torch_supa,rmse_k,0.007130512502044439,K,success
+torch_supa,relative_l2_error,0.00010028595715994015,ratio,success
+torch_supa,reduction_vs_roundtrip_cpu_max_abs_delta,0,K,passed
+torch_supa,end_to_end_vs_source_cpu_relative_l2_delta,4.735703305387305e-9,ratio,passed
+custom_supa,max_abs_error_k,0.00982666015625,K,success
+custom_supa,rmse_k,0.00713051250204,K,success
+custom_supa,relative_l2_error,0.000100285949884,ratio,success
+custom_supa,kernel_vs_float32_cpu_relative_l2_delta,2.417946946180541e-12,ratio,passed
+custom_supa,end_to_end_vs_source_float64_cpu_relative_l2_delta,4.728427365228776e-9,ratio,passed
+custom_supa,subprocess_runtime_s,0.023889731615781784,s,success

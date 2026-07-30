@@ -1,0 +1,3 @@
+﻿case_label,thermal_diffusivity_m2_s,status,wall_runtime_s,quantum_runtime_s,final_peak_temperature_k
+lower_diffusivity,5e-7,success,5.910248603671789,2.7236577346920967,99.48055148124695
+higher_diffusivity,0.000001,success,2.315725198946893,2.2024568230845034,99.04929995536804

@@ -1,0 +1,28 @@
+﻿dataset,field,unit_or_type,meaning,origin_role
+01_temperature_profile.csv,position_m,metres,x coordinate including Dirichlet boundaries,plot x
+01_temperature_profile.csv,analytic_temperature_k,K,closed-form sine-mode reference,line series
+01_temperature_profile.csv,classical_temperature_k,K,explicit finite-difference baseline,line series
+01_temperature_profile.csv,quantum_gpu_temperature_k,K,UnitaryLab interior field with zero boundaries restored,line series
+01_temperature_profile.csv,quantum_cpu_temperature_k,K,CPU reference route,line series
+01_temperature_profile.csv,abs_error_gpu_k,K,absolute GPU-to-analytic error,optional line
+01_temperature_profile.csv,abs_error_cpu_k,K,absolute CPU-to-analytic error,optional line
+02_error_decomposition.csv,layer_index,index,error-layer order,x or label
+02_error_decomposition.csv,comparison,label,source and target of error layer,categorical label
+02_error_decomposition.csv,max_abs_error_k,K,maximum absolute error,y series
+02_error_decomposition.csv,rmse_k,K,root mean square error,y series
+02_error_decomposition.csv,relative_l2_error,ratio,relative L2 error,y series
+03_runtime_comparison.csv,backend,label,execution backend,category
+03_runtime_comparison.csv,runtime_s,s,measured wall-clock stage runtime,bar/column
+04_working_region_fourier.csv,fourier_number_x,dimensionless,Fourier number,x
+04_working_region_fourier.csv,confirmed_nt_y,integer,confirmed minimum Trotter steps,y
+04_working_region_fourier.csv,confirmed_relative_l2_error_y,ratio,relative L2 error at confirmed profile,y
+04_working_region_fourier.csv,confirmed_runtime_s_y,s,runtime at confirmed profile,y
+05_working_region_grid.csv,spatial_points_x,count,interior spatial points,x
+05_working_region_grid.csv,confirmed_nt_y,integer,confirmed minimum Trotter steps,y
+06_working_region_confirmed.csv,fourier_number,dimensionless,confirmed profile Fourier number,group
+07_working_region_all_runs.csv,strict_accuracy_passed,0/1,strict accuracy gate outcome,flag column
+08_audit_checks.csv,passed_1_0,0/1,audit check outcome,flag column
+09_material_comparison.csv,thermal_diffusivity_m2_s,m2/s,material/scenario diffusivity,x or category
+10_cpu_gpu_field_difference.csv,absolute_difference_k,K,pointwise CPU/GPU absolute difference,y
+11_supa_consistency.csv,value,mixed by unit,metric value; inspect unit column,y
+12_natural_language_plan.csv,value,mixed by parameter,parsed request parameter,table

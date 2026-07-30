@@ -1,0 +1,20 @@
+﻿check_name,target,passed_1_0,numeric_value,numeric_threshold,value_json,threshold_json
+finite_nonempty_field,classical,1,,,"{""size"": 34, ""all_finite"": true}","{""min_size"": 1, ""all_finite"": true}"
+boundary_residual,classical,1,0,1e-8,0,1e-8
+maximum_principle_range,classical,1,,,"{""min_k"": 0.0, ""max_k"": 98.90638115602745}","{""min_k"": -0.001, ""max_k"": 100.001}"
+positive_diffusivity_decay,classical,1,98.90638115602745,100.000001,98.90638115602745,100.000001
+max_abs_error,classical,1,0.0006408140299640763,15,0.0006408140299640763,15
+rmse,classical,1,0.00044691683276772284,15,0.00044691683276772284,15
+relative_l2_error,classical,1,0.0000064790377963601114,0.2,0.0000064790377963601114,0.2
+finite_difference_stability,classical,1,0.02178,0.5,0.02178,0.5
+finite_nonempty_field,quantum,1,,,"{""size"": 32, ""all_finite"": true}","{""min_size"": 1, ""all_finite"": true}"
+boundary_residual,quantum,1,0,1e-8,0,1e-8
+maximum_principle_range,quantum,1,,,"{""min_k"": 9.412875771522522, ""max_k"": 98.89591336250305}","{""min_k"": -0.001, ""max_k"": 100.001}"
+positive_diffusivity_decay,quantum,1,98.89591336250305,100.000001,98.89591336250305,100.000001
+max_abs_error,quantum,1,0.009826979494448551,15,0.009826979494448551,15
+rmse,quantum,1,0.007130176547467133,15,0.007130176547467133,15
+relative_l2_error,quantum,1,0.00010028122145663477,0.2,0.00010028122145663477,0.2
+cpu_gpu_max_difference,quantum,1,0.00011324882507324219,0.001,0.00011324882507324219,0.001
+schrodingerization_error_decomposition,error_decomposition,1,,,"{""status"": ""success"", ""recovery_status"": ""success""}","{""status"": ""success"", ""recovery_status"": ""success""}"
+supa_error_metric_consistency,supa_audit,1,,,"{""passed"": true, ""reduction_vs_roundtrip_cpu"": {""passed"": true, ""absolute_differences"": {""max_abs_error"": 0.0, ""rmse"": 9.985290545799774e-11, ""relative_l2_error"": 9.69388710470899e-12}, ""threshold"": 1e-08}, ""end_to_end_vs_source_cpu"": {""passed"": true, ""absolute_differences"": {""max_abs_error"": 3.1933819855112233e-07, ""rmse"": 3.3595457730670186e-07, ""relative_l2_error"": 4.735703305387305e-09}, ""threshold"": 1e-05}, ""host_device_roundtrip_max_abs_k"": {""actual"": 3.5762786865234375e-06, ""reference"": 3.085959548343453e-06}}","{""status"": ""success"", ""reduction_vs_roundtrip_cpu"": ""1e-8"", ""end_to_end_vs_source_cpu"": ""1e-5""}"
+custom_supa_error_metric_consistency,custom_supa_audit,1,,,"{""passed"": true, ""kernel_vs_float32_cpu"": {""passed"": true, ""absolute_differences"": {""max_abs_error"": 0.0, ""rmse"": 9.985734461537277e-11, ""relative_l2_error"": 2.417946946180541e-12}, ""threshold"": 1e-06}, ""end_to_end_vs_source_float64_cpu"": {""passed"": true, ""absolute_differences"": {""max_abs_error"": 3.1933819855112233e-07, ""rmse"": 3.359545728675445e-07, ""relative_l2_error"": 4.728427365228776e-09}, ""threshold"": 1e-05}}","{""status"": ""success"", ""kernel_vs_float32_cpu"": ""1e-6"", ""end_to_end_vs_source_float64_cpu"": ""1e-5""}"

@@ -1,0 +1,19 @@
+0842f3a22b51ed0902a950091dc3bb04924baf6f8e2240bd5c7f4e2b6a4ba86a  results/origin_data/origin_ready/04_working_region_fourier.csv  # Origin-ready cleaned dataset
+1282e68bc100f440a2bfb0031b08b18876a4a7cf923049f9a52742bc2a803e88  results/skill_entry_gpu_validation/audit.json  # source used by existing origin export
+21e189f430393d5058c2e1887346c4915bc37e3087103d41f67d404ee91ed4cf  results/skill_entry_gpu_validation/result.json  # source used by existing origin export
+2466a63d1772489a08d61dce2bcca3c10e1bda6e23cc938e24e120bd516e87ec  results/origin_data/origin_ready/09_material_comparison.csv  # Origin-ready cleaned dataset
+4d34cf4d47aab66e9c31f8bb22a9533aad8459a403160120146a41406cb98ac8  results/origin_data/origin_ready/05_working_region_grid.csv  # Origin-ready cleaned dataset
+52405333ac721efd6f5665778fcd971086eeb44050494e4f6a9bd292b1720bb8  results/origin_data/origin_ready/06_working_region_confirmed.csv  # Origin-ready cleaned dataset
+5d22f8b67514138b1bf98364ef09ae33ca4cd9388e0d55cb35e215fa9ac2aaaa  results/origin_data/origin_ready/07_working_region_all_runs.csv  # Origin-ready cleaned dataset
+6124d1a6a3aa973c6388e6ab0619c73c9e43efdf879ac9a6326a067abb49562b  results/origin_data/origin_ready/11_supa_consistency.csv  # Origin-ready cleaned dataset
+62cd10260ac7d4b6e2c63bbb1a2006b77779b7a2ea935ece0f12cf6e2a39e079  results/origin_data/origin_ready/10_cpu_gpu_field_difference.csv  # Origin-ready cleaned dataset
+912f2e8866c87ad46768ae613cd6997ec5554500b2be2831d09029b25b4a460b  results/origin_data/DATA_DICTIONARY.csv  # data dictionary
+9d96c9ea697738e23e07055dde72036f42691d700d89da2e38162c760cd059a9  results/skill_entry_gpu_validation/run.log  # source used by existing origin export
+a0459cfa1a9ecc5b5f15eb061435127314d2a13fdc3a9c4a4d4fa0862f649721  results/origin_data/origin_ready/03_runtime_comparison.csv  # Origin-ready cleaned dataset
+ba8f2dc3338f5530d66d9d212bd109755c802c2699ee713db11c945e7ffcaaa0  results/origin_data/origin_ready/02_error_decomposition.csv  # Origin-ready cleaned dataset
+cf44c45388aa2da609cee33551fe94319c09a544616f1feec53b4e63d3a6fac0  results/benchmarks/working_region_fo/working_region.json  # source used by existing origin export
+dd7481af37817cd1045a727b03bae00e9ca1cac7109a9f623b9db3f0108519fc  results/origin_data/origin_ready/08_audit_checks.csv  # Origin-ready cleaned dataset
+e6189a95588dfcf45a4012f9460b2e8a71b327c98eaf8d2ccbf99eebaec79081  results/benchmarks/working_region_grid/working_region.json  # source used by existing origin export
+f9a1ffb0826486db00b48cf6715ba05615eec1e552cc3da336cd49670d5d7b2a  results/origin_data/origin_ready/12_natural_language_plan.csv  # Origin-ready cleaned dataset
+fb03d044444c5a2df3d8ed207504a8f964b37fb334b945edcc675d524c64c82c  results/origin_data/origin_ready/01_temperature_profile.csv  # Origin-ready cleaned dataset
+fbbc9d7d762d32b5944faeaae685e9cf7942924beedba2ddeee0ce3d4a78c420  results/benchmarks/working_region_gapfill/working_region.json  # source used by existing origin export

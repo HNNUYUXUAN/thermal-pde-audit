@@ -39,7 +39,7 @@
 
 - 建立 55 项 CPU 侧测试、Ruff、Mypy 与 GitHub Actions。
 - 提供结果包、参数档案和交互证据验证器。
-- 导出 10 张 Origin 友好 CSV 表和已复核 Excel 工作簿。
+- 导出 12 张 Origin-ready CSV 表、222 行绘图数据和已复核 Excel 工作簿。
 - 将可复用 Skill 组织为 `skills/thermal-pde-audit/` 标准文件夹。
 - 围绕源码、成功证据、复现入口、科学基础和致谢完成公开仓库整理。
 

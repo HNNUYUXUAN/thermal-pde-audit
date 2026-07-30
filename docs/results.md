@@ -11,7 +11,7 @@ CPU/GPU 量子仿真、双 SUPA 归约、物理检查、误差分层和证据导
 |---|---:|
 | 工作流状态 | `success` |
 | 精确量子档案 | `Nt=2, na=8, R=16, point=1` |
-| 完整工作流用时 | `35 s` |
+| 完整工作流用时 | `36.143 s` |
 | 经典有限差分相对 L2 | `6.47904e-06` |
 | GPU 量子仿真相对 L2 | `1.0028122e-04` |
 | GPU 最大绝对误差 | `0.00982698 K` |
@@ -107,6 +107,6 @@ PYTHONPATH=src python3 -m thermal_pde_audit.cli validate-profiles
 
 ## Origin 友好数据
 
-10 张 CSV 表和一份已复核工作簿提供温度、绝对误差、误差分层、运行时间、
-扫描和参数档案数据。详见
+12 张 Origin-ready CSV、222 行绘图数据和一份已复核工作簿提供温度、绝对误差、
+误差分层、运行时间、扫描、材料对比、CPU/GPU 场差、SUPA 一致性和自然语言计划数据。详见
 [origin_plot_guide.md](origin_plot_guide.md)。

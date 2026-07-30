@@ -120,7 +120,9 @@ bash skills/thermal-pde-audit/scripts/run-text-demo.sh
 
 ### 可追踪的量子 PDE 路线
 
-这里的“量子”是 UnitaryLab 的量子线路/状态向量仿真路线，而非量子硬件声明。项目保存线路产物、设备路由、同参数恢复和误差分层证据，以便将每次计算追溯到实际执行链。
+这里的“量子”具体指 UnitaryLab 量子线路/状态向量仿真：Biren GPU/SUPA 承担
+量子线路、状态向量张量计算和误差归约，CPU 负责流程控制与后处理。项目保存
+线路产物、设备路由、同参数恢复和误差分层证据，使每次计算均可追溯到实际执行链。
 
 <p align="center">
   <img src="showcase-images/06-quantum-pde-execution-trace.png" alt="Traceable quantum PDE circuit-simulation route on Biren GPU" width="100%">
@@ -133,7 +135,7 @@ bash skills/thermal-pde-audit/scripts/run-text-demo.sh
 | 指标 | 实测结果 |
 |---|---:|
 | 完整工作流状态 | `success` |
-| 完整工作流用时 | 约 `35 s` |
+| 完整工作流用时 | `36.143 s` |
 | 经典有限差分相对 L2 | `6.47904e-06` |
 | GPU 量子仿真相对 L2 | `1.0028122e-04` |
 | GPU 最大绝对误差 | `0.00982698 K` |
@@ -153,7 +155,7 @@ bash skills/thermal-pde-audit/scripts/run-text-demo.sh
 - 7 组覆盖标准运行、材料对比、CPU/GPU 对照、参数治理、双 SUPA 和自然语言
   闭环的 Agent/Skill 交互记录；
 - 55 项自动化测试及 GitHub Actions；
-- 10 张 Origin 友好 CSV 表、189 行绘图数据和一份已复核 Excel 工作簿。
+- 12 张 Origin-ready CSV 表、222 行绘图数据和一份已复核 Excel 工作簿。
 
 <p align="center">
   <img src="showcase-images/07-verified-parameter-profiles.png" alt="Validated quantum parameter profiles across Fourier number, spatial resolution, and Trotter steps" width="100%">
