@@ -233,7 +233,10 @@ def decompose_quantum_error(
         ),
     }
     if recovery.get("status") == "success":
-        recovery_field = recovery["state_or_field_k"]
+        recovery_field = np.asarray(
+            recovery["state_or_field_k"],
+            dtype=float,
+        )
         metrics["same_parameter_recovery_vs_semi_discrete"] = recovery[
             "metrics_vs_semi_discrete"
         ]
