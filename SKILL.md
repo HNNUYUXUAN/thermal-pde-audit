@@ -22,7 +22,7 @@ UnitaryLab Schrödingerization CPU/壁仞 GPU 量子线路仿真、双 SUPA 归�
 |---|---|
 | 自然语言驱动实验 | 确定性解析中英文长度、热扩散率、温升、时长、网格与设备要求 |
 | 多基线联合验证 | 同轮生成解析解、显式有限差分与量子仿真结果 |
-| 壁仞 GPU 真实执行 | 在 Biren106M 竞赛环境完成 UnitaryLab CPU/GPU 同参数复验 |
+| 壁仞 GPU 实际执行 | 在 Biren106M 竞赛环境完成 UnitaryLab CPU/GPU 同参数复验 |
 | 双 SUPA 审计 | `torch.supa` 张量归约 + 项目自研 `.su` 并行归约核 |
 | 精确量子参数治理 | 依据 14 组实测档案自动选择 Trotter 参数 |
 | 分层误差解释 | 区分空间离散、Schrödingerization 恢复、Trotter 与设备差异 |

@@ -20,7 +20,7 @@ Compare material case higher_diffusivity with diffusivity 1e-06 m^2/s
 | `device` | gpu |
 | `seed` | 42 |
 
-## 真实量子算法与设备
+## 实际量子仿真算法与执行设备
 
 - 状态：`success`
 - 后端：`unitarylab_gpu`
@@ -63,8 +63,8 @@ Compare material case higher_diffusivity with diffusivity 1e-06 m^2/s
 ## 性能
 
 - 量子主后端总调用：`2.2024568` s
-- CPU 参考总调用：`None` s
-- 小规模 GPU 若慢于 CPU，原因可能包括后端初始化、编译和数据迁移；本报告不据此宣称量子或 GPU 加速。
+- CPU 参考调用：本次材料对比基准未配置（单后端材料响应对比）。
+- 运行时间完整计入后端初始化、编译、执行与数据传输，便于复现实验进行同口径对照。
 
 ## 结论
 

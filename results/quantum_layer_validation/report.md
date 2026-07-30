@@ -27,7 +27,7 @@
 - 连续通过点：`[16, 32]`
 - 证据：`['results/benchmarks/working_region_fo/working_region.json', 'results/benchmarks/working_region_grid/working_region.json', 'results/benchmarks/working_region_gapfill/working_region.json', 'results/run_logs/quantum_working_region_fo_retry.log', 'results/run_logs/quantum_working_region_grid.log', 'results/run_logs/quantum_profile_gapfill.log']`
 
-## 真实量子算法与设备
+## 实际量子仿真算法与执行设备
 
 - 状态：`success`
 - 后端：`unitarylab_gpu`
@@ -105,7 +105,7 @@
 
 - 量子主后端总调用：`403.02887` s
 - CPU 参考总调用：`20.667282` s
-- 小规模 GPU 若慢于 CPU，原因可能包括后端初始化、编译和数据迁移；本报告不据此宣称量子或 GPU 加速。
+- 运行时间完整计入后端初始化、编译、执行与数据传输，便于复现实验进行同口径对照。
 
 ## 结论
 

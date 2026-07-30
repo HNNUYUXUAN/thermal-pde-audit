@@ -35,7 +35,7 @@
 - 连续通过点：`[1, 2]`
 - 证据：`['results/benchmarks/working_region_fo/working_region.json', 'results/benchmarks/working_region_grid/working_region.json', 'results/benchmarks/working_region_gapfill/working_region.json', 'results/run_logs/quantum_working_region_fo_retry.log', 'results/run_logs/quantum_working_region_grid.log', 'results/run_logs/quantum_profile_gapfill.log']`
 
-## 真实量子算法与设备
+## 实际量子仿真算法与执行设备
 
 - 状态：`success`
 - 后端：`unitarylab_gpu`

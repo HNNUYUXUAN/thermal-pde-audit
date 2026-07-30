@@ -8,7 +8,7 @@
 2. 温度曲线补齐可绘图的 `position_m`、analytic/classical/CPU/GPU 四条曲线；量子结果仅含内部节点，边界按受控零 Dirichlet 协议补为 0 K。
 3. 误差分解、运行时、工作区扫描和审计检查保持一行一个观测；通过状态另设 `passed_1_0` 或 `status` 字段，避免依赖颜色表达语义。
 4. 所有源文件 SHA-256 记录在 `SOURCE_MANIFEST.sha256`，每个数据集的字段与单位记录在 `DATA_DICTIONARY.csv`。
-5. 不把 GPU 仿真写成量子硬件实测；图注使用“Biren GPU/SUPA 仿真与 CPU 参考路线”，并保留运行环境说明。
+5. 图注统一使用“Biren GPU/SUPA 仿真与 CPU 参考路线”，准确体现 UnitaryLab 量子线路模拟器的执行边界，并保留运行环境说明。
 
 ## 图表—数据—源码映射
 
