@@ -4,6 +4,8 @@
 
 # 热鉴 · Thermal PDE Audit
 
+[项目主页（书生·端砚）](https://discovery.intern-ai.org.cn/scp/skill/456)
+
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![CPU Validation](https://img.shields.io/badge/tests-55%20passed-brightgreen.svg)](.github/workflows/cpu-validation.yml)
